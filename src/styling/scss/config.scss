@@ -1,0 +1,14 @@
+$colors: (
+  $background: #ffffff,
+  $text-color: #636363,
+);
+
+@function color($color) {
+  @return map-get($colors, $color);
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
