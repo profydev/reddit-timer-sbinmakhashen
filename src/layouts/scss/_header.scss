@@ -1,6 +1,5 @@
 @import 'config';
 header {
-<<<<<<< HEAD
   background: #ffffff;
   position: fixed;
   top: 0;
@@ -20,19 +19,6 @@ header {
       li {
         margin: 0 26px;
       }
-=======
-  @include flex-center;
-  justify-content: space-between;
-  height: 100px;
-  .logo {
-    margin-left: 25px;
-  }
-
-  .nav-links {
-    @include flex-center;
-    li {
-      margin: 0 25px;
->>>>>>> main
     }
   }
 }
