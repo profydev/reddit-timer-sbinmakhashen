@@ -1,4 +1,5 @@
 header {
+<<<<<<< HEAD
   background: #ffffff;
   position: fixed;
   top: 0;
@@ -6,6 +7,8 @@ header {
 }
 
 header .nav-container {
+=======
+>>>>>>> main
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -18,6 +21,7 @@ header .nav-container {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+<<<<<<< HEAD
   height: 80px;
   margin: auto;
 }
@@ -28,6 +32,16 @@ header .nav-container .logo {
 
 header .nav-container .nav-links {
   margin: auto;
+=======
+  height: 100px;
+}
+
+header .logo {
+  margin-left: 25px;
+}
+
+header .nav-links {
+>>>>>>> main
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -39,8 +53,13 @@ header .nav-container .nav-links {
           align-items: center;
 }
 
+<<<<<<< HEAD
 header .nav-container .nav-links li {
   margin: 0 26px;
+=======
+header .nav-links li {
+  margin: 0 25px;
+>>>>>>> main
 }
 
 * {
@@ -50,15 +69,23 @@ header .nav-container .nav-links li {
   padding: 0;
 }
 
+<<<<<<< HEAD
 html {
   width: 1440px;
 }
 
+=======
+>>>>>>> main
 body {
   background-color: #ffffff;
   color: #636363;
   line-height: 1.4;
+<<<<<<< HEAD
   margin: 90px auto;
+=======
+  max-width: 1440px;
+  margin: 0 auto;
+>>>>>>> main
 }
 
 li {
