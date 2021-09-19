@@ -11,11 +11,11 @@ const Header = () => (
         <nav id="nav-bar">
           <ul style={{ fontFamily: 'montserrat' }} className="nav-links">
             <li>
-              <Link to="/search">Search</Link>
+              <Link to="/search/javascript">Search</Link>
             </li>
             <li>
               <a href="#how-it-works" className="how-it-works">
-                How it Works
+                How it works
               </a>
             </li>
             <li>
