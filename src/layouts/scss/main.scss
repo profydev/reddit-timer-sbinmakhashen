@@ -1,27 +1,16 @@
-@import './header';
-@import 'config';
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
-<<<<<<< HEAD
 html {
   width: 1440px;
 }
-=======
-
->>>>>>> main
 body {
   background-color: color-get(backgroundC);
   color: color-get(text-color);
   line-height: 1.4;
-<<<<<<< HEAD
   margin: 90px auto;
-=======
-  max-width: 1440px;
-  margin: 0 auto;
->>>>>>> main
 }
 li {
   list-style: none;
@@ -30,3 +19,6 @@ a {
   text-decoration: none;
   color: color-get(text-color);
 }
+
+@import './header';
+@import 'config';
