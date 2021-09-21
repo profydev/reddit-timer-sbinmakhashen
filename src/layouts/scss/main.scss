@@ -3,9 +3,6 @@
   margin: 0;
   padding: 0;
 }
-html {
-  width: 1440px;
-}
 body {
   background-color: color-get(backgroundC);
   color: color-get(text-color);
@@ -22,3 +19,4 @@ a {
 
 @import './header';
 @import 'config';
+@import 'footer';

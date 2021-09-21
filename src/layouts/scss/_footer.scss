@@ -1,0 +1,24 @@
+@import './config.scss';
+
+#footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  @include flex-center;
+  justify-content: space-between;
+  margin: auto;
+  padding-bottom: 1rem;
+  width: 90%;
+
+  a {
+    display: inline;
+    text-decoration: none;
+
+    &:active,
+    &:visited,
+    &:hover {
+      color: color-get(text-color);
+    }
+  }
+}
