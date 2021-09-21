@@ -5,7 +5,7 @@ import FooterLogo from './FooterLogo';
 const Footer = () => (
   <footer id="footer">
     <a
-      href="https://ooloo.io/employers"
+      href="profy.dev/employers"
       target="_blank"
       className="profy-link"
       rel="noreferrer"
