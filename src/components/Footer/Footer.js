@@ -5,7 +5,7 @@ import FooterLogo from './FooterLogo';
 const Footer = () => (
   <footer id="footer">
     <a
-      href="profy.dev/employers"
+      href="https://profy.dev/employers"
       target="_blank"
       className="profy-link"
       rel="noreferrer"
