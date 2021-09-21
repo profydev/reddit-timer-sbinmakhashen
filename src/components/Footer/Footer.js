@@ -7,14 +7,16 @@ const Footer = () => (
     <a
       href="https://profy.dev/employers"
       target="_blank"
-      className="profy-link"
+      className="footer-link"
       rel="noreferrer"
     >
       <p>profy.dev</p>
     </a>
-    <FooterLogo />
+    <div className="footer-link">
+      <FooterLogo />
+    </div>
     <Link to="/terms">
-      <p>Terms & Privacy</p>
+      <p className="footer-link"> Terms & Privacy</p>
     </Link>
   </footer>
 );

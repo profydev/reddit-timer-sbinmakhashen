@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../layouts/scss/config.scss"
+    ],
+    "names": [],
+    "file": "config.css"
+}

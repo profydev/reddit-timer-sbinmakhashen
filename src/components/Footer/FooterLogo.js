@@ -4,9 +4,9 @@ import logo from '../../img/footer.svg';
 
 const FooterLogo = () => (
   <>
-    <div className="logo-container">
+    <div className="logo-footer">
       <Link to="/">
-        <img src={logo} alt="Footer reddit icon" className="footer-logo" />
+        <img src={logo} alt="Footer reddit icon" className="logoF" />
       </Link>
     </div>
   </>
