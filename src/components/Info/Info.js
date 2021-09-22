@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Info = () => (
-  <>
+  <div className="info">
     <section id="how-it-works">
       <h1 className="title title-section">How it works</h1>
       <div className="subtitle">
@@ -17,17 +17,15 @@ const Info = () => (
       <div className="subtitle">
         <p>
           This app was created during a course on
-          <a href="https://profy.dev/" target="_blank" rel="noreferrer">profy.dev</a>
+          <a href="https://profy.dev/" target="_blank" rel="noreferrer"> profy.dev </a>
           with the goal to implement a pixel-perfect
           real-world application with professional workflows and
           tools like Kanban, Asana, Zeplin, GitHub, pull requests and code reviews.
-          <a href="https://profy.dev/employers" target="_blank" rel="noreferrer">
-            Click here for more information.
-          </a>
+          <a href="https://profy.dev/employers" target="_blank" rel="noreferrer"> Click here for more information.</a>
         </p>
       </div>
     </section>
-  </>
+  </div>
 );
 
 export default Info;
