@@ -9,7 +9,7 @@ body {
 	color: color-get(text-color);
 	line-height: 1.4;
 	margin: 90px auto;
-	overflow: hidden;
+	// overflow: hidden;
 }
 
 li {
@@ -30,3 +30,4 @@ a {
 @import 'config';
 @import 'footer';
 @import 'hero';
+@import 'info';
