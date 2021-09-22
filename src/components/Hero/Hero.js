@@ -1,9 +1,11 @@
 import React from 'react';
 import HeroBtn from './HeroBtn';
 import HeroImg from './HeroImage';
+import '@fontsource/bitter';
+import '@fontsource/montserrat';
 
 const Hero = () => (
-  <section className="hero">
+  <section id="hero">
     <div className="hero-heading">
       <h1 className="title">No reactions to your reddit posts?</h1>
       <p className="subtitle">
@@ -13,7 +15,7 @@ const Hero = () => (
     </div>
     <div className="hero-content">
       <HeroBtn />
-      <p>r/javascript</p>
+      <p className="r-subreddit">r/javascript</p>
       <HeroImg />
     </div>
   </section>

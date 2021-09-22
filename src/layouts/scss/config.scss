@@ -1,14 +1,18 @@
 $colors: (
-  backgroundC: #ffffff,
-  text-color: #636363,
+	backgroundC: #ffffff,
+	text-color: #636363,
+	title: #000000,
+	subtitle: #93918f,
+	hero-btn: #fdb755,
+	btn-text: #ffffff,
 );
 
 @function color-get($color) {
-  @return map-get($colors, $color);
+	@return map-get($colors, $color);
 }
 
 @mixin flex-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
