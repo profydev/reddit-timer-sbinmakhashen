@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import HeroBtn from './HeroBtn';
 import HeroImg from './HeroImage';
 import '@fontsource/bitter';
@@ -14,9 +15,13 @@ const Hero = () => (
       </p>
     </div>
     <div className="hero-content">
-      <HeroBtn />
+      <Link to="/search/javascript">
+        <HeroBtn />
+      </Link>
       <p className="r-subreddit">r/javascript</p>
-      <HeroImg />
+      <Link to="/search/javascript">
+        <HeroImg />
+      </Link>
     </div>
   </section>
 );

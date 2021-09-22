@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Header from './components/Header';
 import './layouts/css/main.css';
 import Footer from './components/Footer';
@@ -13,7 +13,12 @@ function App() {
         <Footer />
       </div>
       <main>
-        <Hero />
+        <Switch>
+          <Route exact path="/">
+            <Hero />
+          </Route>
+
+        </Switch>
       </main>
     </Router>
   );

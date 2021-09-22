@@ -20,7 +20,8 @@
 	}
 
 	.hero-btn-container {
-		margin: 1.3rem 0;
+		margin: 1.3rem auto;
+		display: inline-block;
 
 		.hero-btn {
 			background: color-get(hero-btn);
@@ -42,10 +43,11 @@
 	}
 
 	.hero-img-container {
-		margin: 1.5rem auto;
+		display: inline;
+
 		.hero-img {
+			margin: 1.5rem auto;
 			width: 90%;
-			margin: auto;
 		}
 	}
 }
