@@ -18,18 +18,22 @@ const Info = () => (
     <section id="about">
       <h1 className="title title-section">About</h1>
       <div className="subtitle">
-        This app was created during a course on
-        <a href="profy.dev" target="_blank" rel="noreferrer">
-          {' '}
-          profy.dev
-        </a>
-        with the goal to implement a pixel-perfect real-world application with
-        professional workflows and tools like Kanban, Asana, Zeplin, GitHub,
-        pull requests and code reviews.
-        <a href="profy.dev/employers" target="_blank" rel="noreferrer">
-          {' '}
-          Click here for more information.
-        </a>
+        <p>
+          This app was created during a course on
+          <a href="https://profy.dev" target="_blank" rel="noreferrer">
+            profy.dev
+          </a>
+          with the goal to implement a pixel-perfect real-world application with
+          professional workflows and tools like Kanban, Asana, Zeplin, GitHub,
+          pull requests and code reviews.
+          <a
+            href="https://profy.dev/employers"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Click here for more information.
+          </a>
+        </p>
       </div>
     </section>
   </div>
