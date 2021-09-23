@@ -9,6 +9,7 @@ body {
   color: color-get(text-color);
   line-height: 1.4;
   margin: 90px auto;
+  overflow: hidden;
 }
 
 li {
@@ -77,5 +78,60 @@ header .nav-container .nav-links li {
 
 #footer .footer-link {
   flex: 1;
+}
+
+#hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: auto;
+  width: 100%;
+  text-align: center;
+}
+
+#hero .title {
+  font-size: 38px;
+  font-family: 'Bitter';
+  color: #000000;
+}
+
+#hero .subtitle {
+  font-family: 'Montserrat';
+  font-size: 1rem;
+  color: #93918f;
+  margin-top: 0.4rem;
+}
+
+#hero .hero-btn-container {
+  margin: 1.3rem auto;
+  display: inline-block;
+}
+
+#hero .hero-btn-container .hero-btn {
+  background: #fdb755;
+  text-align: center;
+  border: 0;
+  font-size: 14px;
+  color: #ffffff;
+  padding: 13.5px 15px;
+  cursor: pointer;
+  font-family: 'Montserrat';
+  border-radius: 4px;
+}
+
+#hero .r-subreddit {
+  font-family: 'Montserrat';
+  color: #93918f;
+  font-weight: 600;
+}
+
+#hero .hero-img-container {
+  display: inline;
+}
+
+#hero .hero-img-container .hero-img {
+  margin: 1.5rem auto;
+  width: 90%;
 }
 /*# sourceMappingURL=main.css.map */

@@ -1,0 +1,53 @@
+@import './config.scss';
+
+#hero {
+	@include flex-center;
+	flex-direction: column;
+	margin: auto;
+	width: 100%;
+	text-align: center;
+
+	.title {
+		font-size: 38px;
+		font-family: 'Bitter';
+		color: color-get(title);
+	}
+	.subtitle {
+		font-family: 'Montserrat';
+		font-size: 1rem;
+		color: color-get(subtitle);
+		margin-top: 0.4rem;
+	}
+
+	.hero-btn-container {
+		margin: 1.3rem auto;
+		display: inline-block;
+
+		.hero-btn {
+			background: color-get(hero-btn);
+			text-align: center;
+			border: 0;
+			font-size: 14px;
+			color: color-get(btn-text);
+			padding: 13.5px 15px;
+			cursor: pointer;
+			font-family: 'Montserrat';
+			border-radius: 4px;
+		}
+	}
+
+	.r-subreddit {
+		font-family: 'Montserrat';
+		color: color-get(subtitle);
+		font-weight: 600;
+	}
+
+	.hero-img-container {
+		display: inline;
+
+		.hero-img {
+			margin: 1.5rem auto;
+			width: 90%;
+		}
+	}
+}
