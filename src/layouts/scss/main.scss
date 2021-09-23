@@ -1,29 +1,33 @@
 * {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-
+html {
+  height: 100%;
+}
 body {
-	background-color: color-get(backgroundC);
-	color: color-get(text-color);
-	line-height: 1.4;
-	margin: 90px auto;
-	// overflow: hidden;
+  background-color: color-get(backgroundC);
+  color: color-get(text-color);
+  line-height: 1.4;
+  margin: 90px auto;
+  // overflow: hidden;
+  height: 100%;
+  width: 100%;
 }
 
 li {
-	list-style: none;
+  list-style: none;
 }
 
 .link {
-	text-decoration: none;
-	color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 
 a {
-	text-decoration: none;
-	color: color-get(text-color);
+  text-decoration: none;
+  color: color-get(text-color);
 }
 
 @import './header';

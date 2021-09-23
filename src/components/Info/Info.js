@@ -21,7 +21,7 @@ const Info = () => (
         <p>
           This app was created during a course on
           <a href="https://profy.dev" target="_blank" rel="noreferrer">
-            profy.dev
+            <span> profy.dev </span>
           </a>
           with the goal to implement a pixel-perfect real-world application with
           professional workflows and tools like Kanban, Asana, Zeplin, GitHub,
@@ -31,7 +31,7 @@ const Info = () => (
             target="_blank"
             rel="noreferrer"
           >
-            Click here for more information.
+            <span> Click here for more information.</span>
           </a>
         </p>
       </div>
