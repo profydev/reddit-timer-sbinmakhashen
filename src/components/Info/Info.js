@@ -2,7 +2,7 @@ import React from 'react';
 
 const Info = () => (
   <div className="info">
-    <section id="how-it-works">
+    <article id="how-it-works">
       <h1 className="title title-section">How it works</h1>
       <div className="subtitle">
         <ul>
@@ -14,8 +14,8 @@ const Info = () => (
           <li>See immediately when to submit your reddit post.</li>
         </ul>
       </div>
-    </section>
-    <section id="about">
+    </article>
+    <article id="about">
       <h1 className="title title-section">About</h1>
       <div className="subtitle">
         <p>
@@ -35,7 +35,7 @@ const Info = () => (
           </a>
         </p>
       </div>
-    </section>
+    </article>
   </div>
 );
 

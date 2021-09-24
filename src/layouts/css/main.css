@@ -5,17 +5,13 @@
   padding: 0;
 }
 
-html {
-  height: 100%;
-}
-
 body {
   background-color: color-get(backgroundC);
   color: color-get(text-color);
   line-height: 1.4;
   margin: 90px auto;
   height: 100%;
-  width: 100%;
+  max-width: 1440px;
 }
 
 li {
@@ -52,16 +48,22 @@ header .nav-container {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  width: 100%;
   height: 80px;
   margin: auto;
 }
 
 header .nav-container .logo {
   margin-left: 80px;
+  margin-top: 1.6rem;
 }
 
-header .nav-container .nav-links {
-  margin: auto;
+header .nav-container #nav-bar {
+  width: 100%;
+  margin-left: 328px;
+}
+
+header .nav-container #nav-bar .nav-links {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -73,8 +75,9 @@ header .nav-container .nav-links {
           align-items: center;
 }
 
-header .nav-container .nav-links li {
-  margin: 0 26px;
+header .nav-container #nav-bar .nav-links li {
+  margin: 0 12px;
+  padding-top: 1.5rem;
 }
 
 #footer {
@@ -89,14 +92,25 @@ header .nav-container .nav-links li {
           align-items: center;
   margin: auto;
   padding: 1rem 0;
+  width: 52%;
   background: #ffffff;
+  position: absolute;
+  height: 100px;
+  left: 0px;
+  right: 0;
+  top: 1310px;
 }
 
 #footer a {
   display: inline;
   text-decoration: none;
   color: inherit;
-  margin: 0 2rem;
+  margin: 0 1.6rem;
+}
+
+#footer .logoF {
+  padding-left: 0.7rem;
+  padding-top: 0.5rem;
 }
 
 #footer .footer-link {
@@ -109,6 +123,7 @@ header .nav-container .nav-links li {
   font-size: 38px;
   font-family: 'Bitter';
   color: #000000;
+  font-weight: unset;
 }
 
 .subtitle {
@@ -133,12 +148,20 @@ header .nav-container .nav-links li {
       -ms-flex-direction: column;
           flex-direction: column;
   margin: auto;
-  width: 100%;
   text-align: center;
 }
 
+#hero .hero-heading {
+  margin-top: 2.1rem;
+}
+
+#hero .hero-heading .subtitle {
+  margin-top: 1rem;
+}
+
 #hero .hero-btn-container {
-  margin: 1.3rem auto;
+  margin: auto;
+  padding-top: 2.7rem;
   display: inline-block;
 }
 
@@ -148,7 +171,8 @@ header .nav-container .nav-links li {
   border: 0;
   font-size: 14px;
   color: #ffffff;
-  padding: 13.5px 15px;
+  width: 217px;
+  height: 36px;
   cursor: pointer;
   font-family: 'Montserrat';
   border-radius: 4px;
@@ -157,7 +181,8 @@ header .nav-container .nav-links li {
 #hero .r-subreddit {
   font-family: 'Montserrat';
   color: #93918f;
-  font-weight: 600;
+  font-weight: 599;
+  padding-top: 2.9rem;
 }
 
 #hero .hero-img-container {
@@ -165,14 +190,15 @@ header .nav-container .nav-links li {
 }
 
 #hero .hero-img-container .hero-img {
-  margin: 4rem auto;
-  width: 95%;
+  margin: 2rem auto;
+  max-width: 100%;
 }
 
 .info {
   margin: auto;
   width: 738px;
   height: 350px;
+  margin-top: 95px;
 }
 
 .info .title-section {
@@ -181,6 +207,8 @@ header .nav-container .nav-links li {
 
 .info .subtitle {
   font-size: 16px;
+  line-height: 1.8rem;
+  padding-left: 0.6rem;
 }
 
 .info ul li {
@@ -188,7 +216,11 @@ header .nav-container .nav-links li {
 }
 
 .info #about {
-  margin-top: 2rem;
+  margin-top: 102px;
+}
+
+.info #about .subtitle {
+  padding-top: 0.3rem;
 }
 
 .info a {

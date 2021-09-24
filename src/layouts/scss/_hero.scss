@@ -4,6 +4,7 @@
   font-size: 38px;
   font-family: 'Bitter';
   color: color-get(title);
+  font-weight: unset;
 }
 .subtitle {
   font-family: 'Montserrat';
@@ -15,11 +16,18 @@
   @include flex-center;
   flex-direction: column;
   margin: auto;
-  width: 100%;
   text-align: center;
 
+  .hero-heading {
+    margin-top: 2.1rem;
+
+    .subtitle {
+      margin-top: 1rem;
+    }
+  }
   .hero-btn-container {
-    margin: 1.3rem auto;
+    margin: auto;
+    padding-top: 2.7rem;
     display: inline-block;
 
     .hero-btn {
@@ -28,7 +36,8 @@
       border: 0;
       font-size: 14px;
       color: color-get(btn-text);
-      padding: 13.5px 15px;
+      width: 217px;
+      height: 36px;
       cursor: pointer;
       font-family: 'Montserrat';
       border-radius: 4px;
@@ -38,15 +47,16 @@
   .r-subreddit {
     font-family: 'Montserrat';
     color: color-get(subtitle);
-    font-weight: 600;
+    font-weight: 599;
+    padding-top: 2.9rem;
   }
 
   .hero-img-container {
     display: inline;
 
     .hero-img {
-      margin: 4rem auto;
-      width: 95%;
+      margin: 2rem auto;
+      max-width: 100%;
     }
   }
 }
