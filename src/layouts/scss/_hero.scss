@@ -1,53 +1,62 @@
 @import './config.scss';
 
+.title {
+  font-size: 38px;
+  font-family: 'Bitter';
+  color: color-get(title);
+  font-weight: unset;
+}
+.subtitle {
+  font-family: 'Montserrat';
+  font-size: 1rem;
+  color: color-get(subtitle);
+  margin-top: 0.4rem;
+}
 #hero {
-	@include flex-center;
-	flex-direction: column;
-	margin: auto;
-	width: 100%;
-	text-align: center;
+  @include flex-center;
+  flex-direction: column;
+  margin: auto;
+  text-align: center;
 
-	.title {
-		font-size: 38px;
-		font-family: 'Bitter';
-		color: color-get(title);
-	}
-	.subtitle {
-		font-family: 'Montserrat';
-		font-size: 1rem;
-		color: color-get(subtitle);
-		margin-top: 0.4rem;
-	}
+  .hero-heading {
+    margin-top: 2.1rem;
 
-	.hero-btn-container {
-		margin: 1.3rem auto;
-		display: inline-block;
+    .subtitle {
+      margin-top: 1rem;
+    }
+  }
+  .hero-btn-container {
+    margin: auto;
+    padding-top: 2.7rem;
+    display: inline-block;
 
-		.hero-btn {
-			background: color-get(hero-btn);
-			text-align: center;
-			border: 0;
-			font-size: 14px;
-			color: color-get(btn-text);
-			padding: 13.5px 15px;
-			cursor: pointer;
-			font-family: 'Montserrat';
-			border-radius: 4px;
-		}
-	}
+    .hero-btn {
+      background: color-get(hero-btn);
+      text-align: center;
+      border: 0;
+      font-size: 14px;
+      color: color-get(btn-text);
+      width: 217px;
+      height: 36px;
+      cursor: pointer;
+      font-family: 'Montserrat';
+      border-radius: 4px;
+    }
+  }
 
-	.r-subreddit {
-		font-family: 'Montserrat';
-		color: color-get(subtitle);
-		font-weight: 600;
-	}
+  .r-subreddit {
+    font-family: 'Montserrat';
+    color: color-get(subtitle);
+    font-weight: 599;
+    padding-top: 2.9rem;
+  }
 
-	.hero-img-container {
-		display: inline;
+  .hero-img-container {
+    display: inline;
 
-		.hero-img {
-			margin: 1.5rem auto;
-			width: 90%;
-		}
-	}
+    .hero-img {
+      margin: 2rem auto;
+      max-width: 100%;
+    }
+  }
 }
