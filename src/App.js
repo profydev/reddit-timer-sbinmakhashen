@@ -6,6 +6,7 @@ import './layouts/css/main.css';
 import Footer from './components/Footer';
 import Hero from './components/Hero';
 import Info from './components/Info/Info';
+import SubForm from './components/SubredditForm/SubForm';
 
 function App() {
   return (
@@ -19,6 +20,9 @@ function App() {
             <Route exact path="/">
               <Hero />
               <Info />
+            </Route>
+            <Route path="/search">
+              <SubForm />
             </Route>
           </Switch>
         </main>
