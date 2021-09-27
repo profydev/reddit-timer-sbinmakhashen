@@ -1,3 +1,5 @@
+@import 'config';
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -5,16 +7,12 @@
 }
 
 body {
-  // max-width: 1440px;
   background-color: color-get(backgroundC);
   color: color-get(text-color);
   line-height: 1.4;
   margin: 90px auto;
   height: 100%;
-  // width: 100%;
-  // max-width: 1440px;
-  max-width: 1440px;
-  // height: 1410px;
+  width: 1440px;
 }
 
 li {
@@ -31,8 +29,34 @@ a {
   color: color-get(text-color);
 }
 
+.btn {
+  background: color-get(hero-btn);
+  text-align: center;
+  border: 0;
+  font-size: 14px;
+  color: color-get(btn-text);
+  width: 217px;
+  height: 36px;
+  cursor: pointer;
+  font-family: 'Montserrat';
+  border-radius: 4px;
+}
+
+.title {
+  font-size: 38px;
+  font-family: 'Bitter';
+  color: color-get(title);
+  font-weight: unset;
+}
+.subtitle {
+  font-family: 'Montserrat';
+  font-size: 1rem;
+  color: color-get(subtitle);
+  margin-top: 0.4rem;
+}
+
 @import './header';
-@import 'config';
 @import 'footer';
 @import 'hero';
 @import 'info';
+@import 'form';

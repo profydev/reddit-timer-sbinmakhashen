@@ -6,12 +6,12 @@
 }
 
 body {
-  background-color: color-get(backgroundC);
-  color: color-get(text-color);
+  background-color: #ffffff;
+  color: #636363;
   line-height: 1.4;
   margin: 90px auto;
   height: 100%;
-  max-width: 1440px;
+  width: 1440px;
 }
 
 li {
@@ -25,7 +25,34 @@ li {
 
 a {
   text-decoration: none;
-  color: color-get(text-color);
+  color: #636363;
+}
+
+.btn {
+  background: #fdb755;
+  text-align: center;
+  border: 0;
+  font-size: 14px;
+  color: #ffffff;
+  width: 217px;
+  height: 36px;
+  cursor: pointer;
+  font-family: 'Montserrat';
+  border-radius: 4px;
+}
+
+.title {
+  font-size: 38px;
+  font-family: 'Bitter';
+  color: #000000;
+  font-weight: unset;
+}
+
+.subtitle {
+  font-family: 'Montserrat';
+  font-size: 1rem;
+  color: #93918f;
+  margin-top: 0.4rem;
 }
 
 header {
@@ -119,20 +146,6 @@ header .nav-container #nav-bar .nav-links li {
           flex: 1;
 }
 
-.title {
-  font-size: 38px;
-  font-family: 'Bitter';
-  color: #000000;
-  font-weight: unset;
-}
-
-.subtitle {
-  font-family: 'Montserrat';
-  font-size: 1rem;
-  color: #93918f;
-  margin-top: 0.4rem;
-}
-
 #hero {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -163,19 +176,6 @@ header .nav-container #nav-bar .nav-links li {
   margin: auto;
   padding-top: 2.7rem;
   display: inline-block;
-}
-
-#hero .hero-btn-container .hero-btn {
-  background: #fdb755;
-  text-align: center;
-  border: 0;
-  font-size: 14px;
-  color: #ffffff;
-  width: 217px;
-  height: 36px;
-  cursor: pointer;
-  font-family: 'Montserrat';
-  border-radius: 4px;
 }
 
 #hero .r-subreddit {
@@ -225,5 +225,35 @@ header .nav-container #nav-bar .nav-links li {
 
 .info a {
   color: #4287f5;
+}
+
+#form {
+  text-align: center;
+  padding-top: 32px;
+}
+
+#form .title {
+  padding-bottom: 27px;
+}
+
+#form label {
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+#form #sub-input {
+  background: #ffffff;
+  border: 1px solid #e6e6e6;
+  outline: none;
+  border-radius: 2px;
+  padding: 0.5rem 1rem;
+  font-size: 14px;
+  font-family: 'Montserrat';
+  width: 370px;
+}
+
+#form .form-btn {
+  width: 92px;
+  margin-left: 10px;
 }
 /*# sourceMappingURL=main.css.map */

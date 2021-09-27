@@ -1,17 +1,5 @@
 @import './config.scss';
 
-.title {
-  font-size: 38px;
-  font-family: 'Bitter';
-  color: color-get(title);
-  font-weight: unset;
-}
-.subtitle {
-  font-family: 'Montserrat';
-  font-size: 1rem;
-  color: color-get(subtitle);
-  margin-top: 0.4rem;
-}
 #hero {
   @include flex-center;
   flex-direction: column;
@@ -29,19 +17,6 @@
     margin: auto;
     padding-top: 2.7rem;
     display: inline-block;
-
-    .hero-btn {
-      background: color-get(hero-btn);
-      text-align: center;
-      border: 0;
-      font-size: 14px;
-      color: color-get(btn-text);
-      width: 217px;
-      height: 36px;
-      cursor: pointer;
-      font-family: 'Montserrat';
-      border-radius: 4px;
-    }
   }
 
   .r-subreddit {
