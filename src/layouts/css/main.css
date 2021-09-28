@@ -11,11 +11,7 @@ body {
   line-height: 1.4;
   margin: 90px auto;
   height: 100%;
-<<<<<<< HEAD
-  width: 1440px;
-=======
   max-width: 1440px;
->>>>>>> a1944fc3d3a8e0a46c1c4f7d48c66f3f8ac898b3
 }
 
 li {
@@ -70,7 +66,6 @@ header .nav-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-<<<<<<< HEAD
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -80,11 +75,6 @@ header .nav-container {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-=======
-  justify-content: center;
-  align-items: center;
-  justify-content: space-between;
->>>>>>> a1944fc3d3a8e0a46c1c4f7d48c66f3f8ac898b3
   width: 100%;
   height: 80px;
   margin: auto;
@@ -101,11 +91,8 @@ header .nav-container #nav-bar {
 }
 
 header .nav-container #nav-bar .nav-links {
-<<<<<<< HEAD
   display: -webkit-box;
   display: -ms-flexbox;
-=======
->>>>>>> a1944fc3d3a8e0a46c1c4f7d48c66f3f8ac898b3
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -121,11 +108,8 @@ header .nav-container #nav-bar .nav-links li {
 }
 
 #footer {
-<<<<<<< HEAD
   display: -webkit-box;
   display: -ms-flexbox;
-=======
->>>>>>> a1944fc3d3a8e0a46c1c4f7d48c66f3f8ac898b3
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -208,9 +192,18 @@ header .nav-container #nav-bar .nav-links li {
   display: inline-block;
 }
 
-<<<<<<< HEAD
-=======
-#hero .hero-btn-container .hero-btn {
+#hero .r-subreddit {
+  font-family: 'Montserrat';
+  color: #93918f;
+  font-weight: 599;
+  padding-top: 2.9rem;
+}
+
+#hero .hero-img-container {
+  display: inline;
+}
+
+#hero .hero-img-container .hero-btn {
   background: #fdb755;
   text-align: center;
   border: 0;
@@ -223,7 +216,6 @@ header .nav-container #nav-bar .nav-links li {
   border-radius: 4px;
 }
 
->>>>>>> a1944fc3d3a8e0a46c1c4f7d48c66f3f8ac898b3
 #hero .r-subreddit {
   font-family: 'Montserrat';
   color: #93918f;
@@ -271,7 +263,6 @@ header .nav-container #nav-bar .nav-links li {
 
 .info a {
   color: #4287f5;
-<<<<<<< HEAD
 }
 
 #form {
@@ -302,7 +293,5 @@ header .nav-container #nav-bar .nav-links li {
 #form .form-btn {
   width: 92px;
   margin-left: 10px;
-=======
->>>>>>> a1944fc3d3a8e0a46c1c4f7d48c66f3f8ac898b3
 }
 /*# sourceMappingURL=main.css.map */
