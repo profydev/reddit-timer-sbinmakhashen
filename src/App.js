@@ -12,9 +12,7 @@ function App() {
   return (
     <SubContextProvider>
       <Router>
-        <header>
-          <Header />
-        </header>
+        <Header />
         <main>
           <Switch>
             <Route exact path="/">
@@ -26,9 +24,7 @@ function App() {
             </Route>
           </Switch>
         </main>
-        <footer>
-          <Footer />
-        </footer>
+        <Footer />
       </Router>
     </SubContextProvider>
   );
