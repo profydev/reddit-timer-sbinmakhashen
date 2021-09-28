@@ -10,6 +10,9 @@ const SubForm = () => {
     event.preventDefault();
     history.push(`/search/${subreddit}`);
   }
+
+  // const headerLink = document.querySelector('.search-link');
+  // headerLink
   return (
     <form id="form" onSubmit={handleSubmit}>
       <div className="form-header">
