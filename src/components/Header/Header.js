@@ -6,6 +6,7 @@ import Logo from './Logo';
 
 const Header = () => {
   const { subreddit } = useContext(SubContext);
+
   return (
     <>
       <header>
@@ -14,7 +15,11 @@ const Header = () => {
           <nav id="nav-bar">
             <ul style={{ fontFamily: 'montserrat' }} className="nav-links">
               <li>
-                <Link className="link" to={`/search/${subreddit}`}>
+                <Link
+                  className="link search-link"
+                  to={`/search/${subreddit}`}
+                  // onClick={updateInputUrl}
+                >
                   Search
                 </Link>
               </li>
