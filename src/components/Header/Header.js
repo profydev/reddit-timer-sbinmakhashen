@@ -5,12 +5,7 @@ import '@fontsource/montserrat';
 import Logo from './Logo';
 
 const Header = () => {
-  const { subreddit, setSubReddit } = useContext(SubContext);
-
-  function updateInputValue() {
-    setSubReddit('javascript');
-    // input.value = subreddit;
-  }
+  const { subreddit } = useContext(SubContext);
 
   return (
     <>
@@ -21,9 +16,9 @@ const Header = () => {
             <ul style={{ fontFamily: 'montserrat' }} className="nav-links">
               <li>
                 <Link
-                  className="link"
+                  className="link search-link"
                   to={`/search/${subreddit}`}
-                  onClick={updateInputValue}
+                  // onClick={updateInputUrl}
                 >
                   Search
                 </Link>

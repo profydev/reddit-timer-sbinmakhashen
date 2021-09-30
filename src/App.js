@@ -19,7 +19,7 @@ function App() {
               <Hero />
               <Info />
             </Route>
-            <Route path="/search">
+            <Route path="/search/:sub">
               <SubForm />
             </Route>
           </Switch>

@@ -1,18 +1,22 @@
-import React, { useContext } from 'react';
-import { useHistory } from 'react-router-dom';
+import React, { useContext, useEffect } from 'react';
+import { useHistory, useParams } from 'react-router-dom';
 import SubContext from '../../Context/SubContext';
 
 const SubForm = () => {
   const { subreddit, setSubReddit } = useContext(SubContext);
   const history = useHistory();
-
   function handleSubmit(event) {
     event.preventDefault();
-    history.push(`/search/${subreddit}`);
+    if (subreddit !== 'javascript') {
+      history.push(`/search/${subreddit}`);
+    }
   }
 
-  // const headerLink = document.querySelector('.search-link');
-  // headerLink
+  const { sub } = useParams();
+  useEffect(() => {
+    setSubReddit(sub);
+  }, [sub, setSubReddit]);
+
   return (
     <form id="form" onSubmit={handleSubmit}>
       <div className="form-header">

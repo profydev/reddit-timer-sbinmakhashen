@@ -5,7 +5,12 @@ import SubContext from './SubContext';
 const SubContextProvider = ({ children }) => {
   const [subreddit, setSubReddit] = useState('javascript');
 
-  useEffect(() => {});
+  useEffect(() => {
+    // update the input value and url when the Header 'search' link is clicked
+    document.querySelector('.search-link').addEventListener('click', () => {
+      setSubReddit('javascript');
+    });
+  }, [subreddit]);
   const value = {
     subreddit,
     setSubReddit,
