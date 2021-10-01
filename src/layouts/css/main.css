@@ -294,4 +294,29 @@ header .nav-container #nav-bar .nav-links li {
   width: 92px;
   margin-left: 10px;
 }
+
+.loading {
+  text-align: center;
+}
+
+.loading .spinner {
+  width: 71px;
+  margin-top: 3.5rem;
+  -webkit-animation: spinn 1.5s infinite linear;
+          animation: spinn 1.5s infinite linear;
+}
+
+@-webkit-keyframes spinn {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spinn {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
 /*# sourceMappingURL=main.css.map */

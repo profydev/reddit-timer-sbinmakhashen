@@ -4,8 +4,9 @@ import SubContext from '../../Context/SubContext';
 import LoadingSpinner from '../loadingState/loadingSpinner';
 
 const SubForm = () => {
-  const { subreddit, setSubReddit, fetchRedditPosts, setIsLoading, isLoading } =
-    useContext(SubContext);
+  const {
+    subreddit, setSubReddit, fetchRedditPosts, setIsLoading, isLoading,
+  } = useContext(SubContext);
   const history = useHistory();
   function handleSubmit(event) {
     event.preventDefault();
