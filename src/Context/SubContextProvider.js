@@ -12,7 +12,7 @@ const SubContextProvider = ({ children }) => {
       setSubReddit('javascript');
     });
   }, [subreddit]);
-
+  
   function fetchRedditPosts() {
     const url = `https://www.reddit.com/r/${subreddit}/top.json?t=year&limit=500`;
     fetch(url)
