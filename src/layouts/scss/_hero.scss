@@ -29,6 +29,17 @@
     margin: auto;
     padding-top: 2.7rem;
     display: inline-block;
+  }
+
+  .r-subreddit {
+    font-family: 'Montserrat';
+    color: color-get(subtitle);
+    font-weight: 599;
+    padding-top: 2.9rem;
+  }
+
+  .hero-img-container {
+    display: inline;
 
     .hero-btn {
       background: color-get(hero-btn);

@@ -1,0 +1,43 @@
+#form {
+  text-align: center;
+  padding-top: 32px;
+  .title {
+    padding-bottom: 27px;
+  }
+
+  label {
+    font-size: 18px;
+    margin-right: 10px;
+  }
+
+  #sub-input {
+    background: color-get(backgroundC);
+    border: 1px solid #e6e6e6;
+    outline: none;
+    border-radius: 2px;
+    padding: 0.5rem 1rem;
+    font-size: 14px;
+    font-family: 'Montserrat';
+    width: 370px;
+  }
+
+  .form-btn {
+    width: 92px;
+    margin-left: 10px;
+  }
+}
+
+.loading {
+  text-align: center;
+  .spinner {
+    width: 71px;
+    margin-top: 3.5rem;
+    animation: spinn 1.5s infinite linear;
+
+    @keyframes spinn {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  }
+}
