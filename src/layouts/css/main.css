@@ -55,6 +55,14 @@ a {
   margin-top: 0.4rem;
 }
 
+.danger {
+  text-align: center;
+  margin-top: 0.8rem;
+  color: #cc3300;
+  font-weight: 600;
+  font-family: 'Montserrat';
+}
+
 header {
   background: #ffffff;
   position: fixed;
@@ -293,5 +301,60 @@ header .nav-container #nav-bar .nav-links li {
 #form .form-btn {
   width: 92px;
   margin-left: 10px;
+}
+
+.loading {
+  text-align: center;
+}
+
+.loading .spinner {
+  width: 71px;
+  margin-top: 3.5rem;
+  -webkit-animation: spinn 1.5s infinite linear;
+          animation: spinn 1.5s infinite linear;
+}
+
+@-webkit-keyframes spinn {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spinn {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+#heatmap {
+  margin-top: 52px;
+  width: 960px;
+  margin: 0 auto;
+}
+
+#heatmap .heatmap-header {
+  width: 960px;
+  height: 52px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #f2f2f2;
+}
+
+#heatmap .heatmap-header .hr-of-posts {
+  color: #787878;
+  font-size: 14px;
+  text-align: center;
+  font-family: 'Montserrat';
+  font-weight: bold;
+  padding: 0 0.8rem;
 }
 /*# sourceMappingURL=main.css.map */

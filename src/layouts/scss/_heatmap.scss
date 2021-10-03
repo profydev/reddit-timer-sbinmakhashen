@@ -1,0 +1,22 @@
+@import 'config';
+
+#heatmap {
+  margin-top: 52px;
+  width: 960px;
+  margin: 0 auto;
+  .heatmap-header {
+    width: 960px;
+    height: 52px;
+    @include flex-center;
+    background-color: darken(color-get(backgroundC), 5%);
+
+    .hr-of-posts {
+      color: color-get(nums-color);
+      font-size: 14px;
+      text-align: center;
+      font-family: 'Montserrat';
+      font-weight: bold;
+      padding: 0 0.8rem;
+    }
+  }
+}
