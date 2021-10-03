@@ -1,30 +1,25 @@
 import React, { useContext, useEffect } from 'react';
 import { useHistory, useParams } from 'react-router-dom';
 import SubContext from '../../Context/SubContext';
-import LoadingSpinner from '../loadingState/loadingSpinner';
 
 const SubForm = () => {
-  const {
-    subreddit, setSubReddit, fetchRedditPosts, setIsLoading, isLoading,
-  } = useContext(SubContext);
+  const { subreddit, setSubReddit, setIsLoading } = useContext(SubContext);
   const history = useHistory();
+  const { sub: initSubreddit } = useParams();
   function handleSubmit(event) {
-    event.preventDefault();
     setIsLoading(true);
-    if (subreddit !== 'javascript') {
-      history.push(`/search/${subreddit}`);
-    }
-    fetchRedditPosts();
+    event.preventDefault();
+    history.push(`/search/${subreddit}`);
   }
 
-  const { sub } = useParams();
   useEffect(() => {
-    setSubReddit(sub);
-  }, [sub, setSubReddit]);
+    setSubReddit(initSubreddit);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [initSubreddit]);
 
   return (
     <>
-      <form id="form" onSubmit={handleSubmit}>
+      <form id="form" onSubmit={handleSubmit} onLoad={handleSubmit}>
         <div className="form-header">
           <h1 className="title">Find the best time for a subreddit</h1>
           {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
@@ -42,7 +37,6 @@ const SubForm = () => {
           </button>
         </div>
       </form>
-      {isLoading && <LoadingSpinner />}
     </>
   );
 };
