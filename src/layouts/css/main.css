@@ -55,6 +55,14 @@ a {
   margin-top: 0.4rem;
 }
 
+.danger {
+  text-align: center;
+  margin-top: 0.8rem;
+  color: #cc3300;
+  font-weight: 600;
+  font-family: 'Montserrat';
+}
+
 header {
   background: #ffffff;
   position: fixed;
@@ -293,5 +301,30 @@ header .nav-container #nav-bar .nav-links li {
 #form .form-btn {
   width: 92px;
   margin-left: 10px;
+}
+
+.loading {
+  text-align: center;
+}
+
+.loading .spinner {
+  width: 71px;
+  margin-top: 3.5rem;
+  -webkit-animation: spinn 1.5s infinite linear;
+          animation: spinn 1.5s infinite linear;
+}
+
+@-webkit-keyframes spinn {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spinn {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
 /*# sourceMappingURL=main.css.map */
