@@ -1,13 +1,16 @@
 import React, { useContext, useEffect } from 'react';
 import { useHistory, useParams } from 'react-router-dom';
-import SubContext from '../../Context/SubContext';
+import SubContext from '../Context/SubContext';
 
 const SubForm = () => {
-  const { subreddit, setSubReddit, setIsLoading } = useContext(SubContext);
+  const { subreddit, setSubReddit, setIsLoading, setErrorStatus } =
+    useContext(SubContext);
   const history = useHistory();
   const { sub: initSubreddit } = useParams();
+
   function handleSubmit(event) {
     setIsLoading(true);
+    setErrorStatus(null);
     event.preventDefault();
     history.push(`/search/${subreddit}`);
   }

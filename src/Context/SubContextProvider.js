@@ -10,17 +10,18 @@ const SubContextProvider = ({ children }) => {
   const [posts, setPosts] = useState([]);
   const [errorStatus, setErrorStatus] = useState(null);
 
+  // recursive solution to get 500 posts when by default posts limit is 100 posts
   async function fetchSubredditPosts(prevPosts = [], after = null) {
     let url = `https://www.reddit.com/r/${subreddit}/top.json?t=year&limit=100`;
-
     if (after) {
       url += `&after=${after}`;
     }
-
     const res = await fetch(url);
     const { data } = await res.json();
+    // add posts to the prevPosts array after every 100 posts
     const allPosts = prevPosts.concat(data.children);
 
+    // when reached 500 posts stop and return those posts
     const noMorePosts = data && data.dist < 100;
     const limitReachedPosts = allPosts.length >= 500;
     if (noMorePosts || limitReachedPosts) {
@@ -36,11 +37,13 @@ const SubContextProvider = ({ children }) => {
       setSubReddit('javascript');
     });
 
+    // start with a loading spinner
     setIsLoading(true);
-
+    // fetch api posts and trigger the function everytime subreddit state variable changes
     fetchSubredditPosts()
       .then((newPosts) => {
         setPosts(newPosts);
+        // stop loading spinner
         setIsLoading(false);
         setErrorStatus(null);
       })
@@ -56,6 +59,7 @@ const SubContextProvider = ({ children }) => {
     fetchSubredditPosts,
     posts,
     errorStatus,
+    setErrorStatus,
   };
   return (
     <>

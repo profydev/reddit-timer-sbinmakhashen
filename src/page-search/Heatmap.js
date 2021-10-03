@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import SubContext from '../Context/SubContext';
-import LoadingSpinner from './loadingState/loadingSpinner';
+import LoadingSpinner from './loadingSpinner';
 
 const Heatmap = () => {
   const { isLoading, posts, errorStatus } = useContext(SubContext);
@@ -16,6 +16,7 @@ const Heatmap = () => {
   if (isLoading) {
     return <LoadingSpinner />;
   }
+
   return <>{posts.length}</>;
 };
 

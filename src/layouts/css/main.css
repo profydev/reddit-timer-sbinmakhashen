@@ -55,6 +55,14 @@ a {
   margin-top: 0.4rem;
 }
 
+.danger {
+  text-align: center;
+  margin-top: 0.8rem;
+  color: #cc3300;
+  font-weight: 600;
+  font-family: 'Montserrat';
+}
+
 header {
   background: #ffffff;
   position: fixed;

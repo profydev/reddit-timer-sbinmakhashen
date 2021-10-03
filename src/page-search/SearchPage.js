@@ -1,5 +1,5 @@
 import React from 'react';
-import SubForm from './SubredditForm/SubForm';
+import SubForm from './SubForm';
 import Heatmap from './Heatmap';
 
 function SearchPage() {

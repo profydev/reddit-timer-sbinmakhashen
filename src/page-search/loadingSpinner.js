@@ -1,5 +1,5 @@
 import React from 'react';
-import loadingSpin from '../../img/loading_spinner.png';
+import loadingSpin from '../img/loading_spinner.png';
 
 const LoadingSpinner = () => (
   <div className="loading">
