@@ -3,8 +3,9 @@ import { useHistory, useParams } from 'react-router-dom';
 import SubContext from '../Context/SubContext';
 
 const SubForm = () => {
-  const { subreddit, setSubReddit, setIsLoading, setErrorStatus } =
-    useContext(SubContext);
+  const {
+    subreddit, setSubReddit, setIsLoading, setErrorStatus,
+  } = useContext(SubContext);
   const history = useHistory();
   const { sub: initSubreddit } = useParams();
 
