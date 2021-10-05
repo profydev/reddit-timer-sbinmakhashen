@@ -327,4 +327,86 @@ header .nav-container #nav-bar .nav-links li {
             transform: rotate(360deg);
   }
 }
+
+#heatmap {
+  margin-top: 52px;
+}
+
+#heatmap .heatmap-header {
+  width: 960px;
+  height: 52px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #f2f2f2;
+  margin: auto;
+}
+
+#heatmap .heatmap-header .hr-of-posts {
+  color: #787878;
+  font-size: 14px;
+  text-align: center;
+  font-family: 'Montserrat';
+  font-weight: bold;
+  padding: 0 0.8rem;
+}
+
+#heatmap .heatmap-header-container {
+  margin-left: 9.5rem;
+}
+
+#heatmap .heatmap-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#heatmap .heatmap-row .daysOfWeek-container {
+  background: #1e2537;
+  color: #ffffff;
+}
+
+#heatmap .heatmap-row .daysOfWeek-container .day {
+  font-family: 'Montserrat';
+  font-weight: 600;
+  width: 154px;
+  height: 40px;
+  text-align: center;
+}
+
+#heatmap .heatmap-row .heatmap-btn {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 700;
+  text-align: center;
+  border: 0;
+}
+
+#heatmap .heatmap-row .heatmap-btn:hover {
+  opacity: 0.8;
+}
+
+#heatmap .time {
+  font-family: 'Montserrat';
+  text-align: center;
+  margin-top: 12px;
+}
+
+#heatmap .time-zone {
+  font-weight: bold;
+}
 /*# sourceMappingURL=main.css.map */
