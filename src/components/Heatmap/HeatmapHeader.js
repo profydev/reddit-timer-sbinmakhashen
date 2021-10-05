@@ -18,10 +18,11 @@ const HeatmapHeader = () => {
 
   return (
     <div className="heatmap-header">
-      {hoursOfPosts.map((hr) => (
-        <>
+      {hoursOfPosts.map((hr, i) => (
+        // eslint-disable-next-line react/no-array-index-key
+        <div key={i}>
           <p className="hr-of-posts">{hr}</p>
-        </>
+        </div>
       ))}
     </div>
   );

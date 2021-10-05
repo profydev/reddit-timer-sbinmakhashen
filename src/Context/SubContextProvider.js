@@ -7,12 +7,16 @@ import SubContext from './SubContext';
 const SubContextProvider = ({ children }) => {
   const [subreddit, setSubReddit] = useState('javascript');
   const [isLoading, setIsLoading] = useState(false);
-  const [posts, setPosts] = useState([]);
+  const [postsPerDay, setPostsPerDay] = useState([]);
   const [errorStatus, setErrorStatus] = useState(null);
+
+  const NumPostsToFetch = 500;
+  const MaxNumOfPostsPerPage = 100;
 
   // recursive solution to get 500 posts when by default posts limit is 100 posts
   async function fetchSubredditPosts(prevPosts = [], after = null) {
-    let url = `https://www.reddit.com/r/${subreddit}/top.json?t=year&limit=100`;
+    let url = `https://www.reddit.com/r/${subreddit}/top.json?t=year&limit=${MaxNumOfPostsPerPage}`;
+
     if (after) {
       url += `&after=${after}`;
     }
@@ -22,13 +26,32 @@ const SubContextProvider = ({ children }) => {
     const allPosts = prevPosts.concat(data.children);
 
     // when reached 500 posts stop and return those posts
-    const noMorePosts = data && data.dist < 100;
-    const limitReachedPosts = allPosts.length >= 500;
+    const noMorePosts = data && data.dist < MaxNumOfPostsPerPage;
+    const limitReachedPosts = allPosts.length >= NumPostsToFetch;
     if (noMorePosts || limitReachedPosts) {
       return allPosts;
     }
 
     return fetchSubredditPosts(allPosts, data.after);
+  }
+
+  function PostsPerDayAndHour(Posts) {
+    const PostsPerDay = Array(7)
+      .fill()
+      .map(() =>
+        Array(24)
+          .fill()
+          .map(() => 0),
+      );
+
+    Posts.forEach((post) => {
+      const createdAt = new Date(post.data.created_utc * 1000);
+      const dayOfTheWeek = createdAt.getDay();
+      const hour = createdAt.getHours();
+
+      PostsPerDay[dayOfTheWeek][hour] += 1;
+    });
+    return PostsPerDay;
   }
 
   useEffect(() => {
@@ -41,12 +64,12 @@ const SubContextProvider = ({ children }) => {
     setIsLoading(true);
     // fetch api posts and trigger the function everytime subreddit state variable changes
     fetchSubredditPosts()
-      .then((newPosts) => {
-        setPosts(newPosts);
+      .then((posts) => PostsPerDayAndHour(posts))
+      .then((newPostsPerDay) => {
+        setPostsPerDay(newPostsPerDay);
         // stop loading spinner
         setIsLoading(false);
         setErrorStatus(null);
-        console.log(posts);
       })
       .catch(() => setErrorStatus('errorFound'));
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -58,7 +81,7 @@ const SubContextProvider = ({ children }) => {
     isLoading,
     setIsLoading,
     fetchSubredditPosts,
-    posts,
+    postsPerDay,
     errorStatus,
     setErrorStatus,
   };
