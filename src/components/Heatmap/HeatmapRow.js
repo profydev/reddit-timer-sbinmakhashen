@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import PropTypes, { number } from 'prop-types';
 
 function HeatmapRow({ day, postsPerHour }) {
@@ -11,6 +11,15 @@ function HeatmapRow({ day, postsPerHour }) {
     'Friday',
     'Saturday',
   ];
+
+  const heatmapBtn = useRef();
+
+  function highlightBox() {
+    // if (s) {
+    //   s.style.background = 'rgba(0,0,0,0.5)';
+    // }
+    console.log(heatmapBtn.current);
+  }
 
   function colorsOfNumPosts(numPosts) {
     switch (numPosts) {
@@ -50,10 +59,11 @@ function HeatmapRow({ day, postsPerHour }) {
             // eslint-disable-next-line react/no-array-index-key
             key={hr}
             numPosts={numPosts}
-            // onClick={highlightBox}
+            onClick={highlightBox}
             type="button"
             className="heatmap-btn"
             style={colorsOfNumPosts(numPosts)}
+            ref={heatmapBtn}
           >
             {numPosts}
           </button>
