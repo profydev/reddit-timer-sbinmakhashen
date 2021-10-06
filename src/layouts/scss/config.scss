@@ -6,6 +6,9 @@ $colors: (
   hero-btn: #fdb755,
   btn-text: #ffffff,
   about-link-color: #4287f5,
+  danger: #cc3300,
+  nums-color: #787878,
+  weekDays: #1e2537,
 );
 
 @function color-get($color) {
