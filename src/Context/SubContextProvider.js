@@ -17,10 +17,12 @@ const SubContextProvider = ({ children }) => {
   // recursive solution to get 500 posts when by default posts limit is 100 posts
   async function fetchSubredditPosts(prevPosts = [], after = null) {
     let url = `https://www.reddit.com/r/${subreddit}/top.json?t=year&limit=${MaxNumOfPostsPerPage}`;
+
     if (after) {
       url += `&after=${after}`;
     }
     const res = await fetch(url, { signal: controller.signal });
+
     const { data } = await res.json();
     // add posts to the prevPosts array after every 100 posts
     const allPosts = prevPosts.concat(data.children);
@@ -80,6 +82,7 @@ const SubContextProvider = ({ children }) => {
       });
     // abort when component unmounts
     return () => controller.abort();
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [subreddit]);
 
