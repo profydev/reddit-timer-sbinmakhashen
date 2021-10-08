@@ -330,6 +330,7 @@ header .nav-container #nav-bar .nav-links li {
 
 #heatmap {
   margin-top: 52px;
+  width: 100%;
 }
 
 #heatmap .heatmap-header {
@@ -386,6 +387,8 @@ header .nav-container #nav-bar .nav-links li {
   height: 40px;
   text-align: center;
   cursor: default;
+  -webkit-transform: translateY(20%);
+          transform: translateY(20%);
 }
 
 #heatmap .heatmap-row .heatmap-btn {
@@ -422,5 +425,27 @@ header .nav-container #nav-bar .nav-links li {
 
 #heatmap .time-zone {
   font-weight: bold;
+}
+
+.posts-container {
+  margin: 1rem auto;
+  width: 786px;
+  height: 211px;
+}
+
+.posts-container table {
+  font-family: 'Montserrat';
+  border-collapse: collapse;
+}
+
+.posts-container td,
+.posts-container th {
+  border: 1px solid #636363;
+  text-align: center;
+  padding: 0.3rem;
+}
+
+.posts-container .posts-title {
+  color: #0087ff;
 }
 /*# sourceMappingURL=main.css.map */

@@ -6,7 +6,7 @@ import HeatmapRow from '../components/Heatmap/HeatmapRow';
 
 const Heatmap = () => {
   const { isLoading, errorStatus, postsPerDay } = useContext(SubContext);
-
+  // console.log(postsPerDay);
   if (errorStatus === 'errorFound') {
     return (
       <p className="danger">
@@ -21,24 +21,26 @@ const Heatmap = () => {
   }
 
   return (
-    <div id="heatmap">
-      <div className="heatmap-header-container">
-        <HeatmapHeader />
+    <>
+      <div id="heatmap">
+        <div className="heatmap-header-container">
+          <HeatmapHeader />
+        </div>
+        <div className="heatmap-rows">
+          {postsPerDay.map((postsPerHour, day) => (
+            // eslint-disable-next-line react/no-array-index-key
+            <HeatmapRow key={day} day={day} postsPerHour={postsPerHour} />
+          ))}
+        </div>
+        <p className="time">
+          All times are shown in your timezone:
+          <span className="time-zone">
+            {' '}
+            {Intl.DateTimeFormat().resolvedOptions().timeZone}
+          </span>
+        </p>
       </div>
-      <div className="heatmap-rows">
-        {postsPerDay.map((postsPerHour, day) => (
-          // eslint-disable-next-line react/no-array-index-key
-          <HeatmapRow key={day} day={day} postsPerHour={postsPerHour} />
-        ))}
-      </div>
-      <p className="time">
-        All times are shown in your timezone:
-        <span className="time-zone">
-          {' '}
-          {Intl.DateTimeFormat().resolvedOptions().timeZone}
-        </span>
-      </p>
-    </div>
+    </>
   );
 };
 

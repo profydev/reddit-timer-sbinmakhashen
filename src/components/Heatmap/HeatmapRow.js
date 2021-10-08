@@ -1,7 +1,12 @@
-import React from 'react';
-import PropTypes, { number } from 'prop-types';
+import React, { useContext, useState } from 'react';
+import PropTypes from 'prop-types';
+import SubContext from '../../Context/SubContext';
 
 function HeatmapRow({ day, postsPerHour }) {
+  const [activeClass, setActiveClass] = useState(true);
+  // const [arrOfPosts, setArrOfPosts] = useState(null);
+  const { setIsClicked, setArrOfPosts } = useContext(SubContext);
+
   const daysOfTheWeek = [
     'Sunday',
     'Monday',
@@ -12,16 +17,14 @@ function HeatmapRow({ day, postsPerHour }) {
     'Saturday',
   ];
 
-  function handleClick(e) {
-    if (e) {
-      e.classList.add('active');
-      if (!e) {
-        e.style.display = 'none';
-      }
+  function handleClick(e, posts) {
+    setIsClicked(true);
+    setArrOfPosts(posts);
+    if (activeClass) {
+      e.target.classList.add('active');
+      setActiveClass(false);
     }
   }
-  // postsPerHour.map((d) => console.log())
-
   function colorsOfNumPosts(numposts) {
     switch (numposts) {
       case 0:
@@ -51,32 +54,39 @@ function HeatmapRow({ day, postsPerHour }) {
   }
 
   return (
-    <div className="heatmap-row">
-      <div className="daysOfWeek-container">
-        <p className="day">{daysOfTheWeek[day]}</p>
+    <>
+      <div className="heatmap-row">
+        <div className="daysOfWeek-container">
+          <p className="day">{daysOfTheWeek[day]}</p>
+        </div>
+        <div className="heatmap-elements">
+          {postsPerHour.map((numposts, hr) => (
+            // {setArrOfPosts(numposts)}
+            <button
+              // eslint-disable-next-line react/no-array-index-key
+              key={hr}
+              numposts={numposts.length}
+              onClick={(e) => handleClick(e, numposts)}
+              type="button"
+              className="heatmap-btn"
+              style={{
+                background: colorsOfNumPosts(numposts.length),
+              }}
+              value={numposts.length}
+            >
+              {numposts.length}
+            </button>
+          ))}
+        </div>
       </div>
-      <div className="heatmap-elements">
-        {postsPerHour.map((numposts, hr) => (
-          <button
-            // eslint-disable-next-line react/no-array-index-key
-            key={hr}
-            numposts={numposts}
-            onClick={(e) => handleClick(e.target)}
-            type="button"
-            className="heatmap-btn"
-            style={{ background: colorsOfNumPosts(numposts) }}
-          >
-            {numposts}
-          </button>
-        ))}
-      </div>
-    </div>
+    </>
   );
 }
 
 HeatmapRow.propTypes = {
   day: PropTypes.number.isRequired,
-  postsPerHour: PropTypes.arrayOf(number).isRequired,
+  // eslint-disable-next-line react/forbid-prop-types
+  postsPerHour: PropTypes.array.isRequired,
 };
 
 export default HeatmapRow;

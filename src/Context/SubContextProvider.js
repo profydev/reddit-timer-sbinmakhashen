@@ -9,6 +9,8 @@ const SubContextProvider = ({ children }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [postsPerDay, setPostsPerDay] = useState([]);
   const [errorStatus, setErrorStatus] = useState(null);
+  const [isClicked, setIsClicked] = useState(false);
+  const [arrOfPosts, setArrOfPosts] = useState(null);
 
   const NumPostsToFetch = 500;
   const MaxNumOfPostsPerPage = 100;
@@ -41,16 +43,25 @@ const SubContextProvider = ({ children }) => {
       .map(() =>
         Array(24)
           .fill()
-          .map(() => 0),
+          .map(() => []),
       );
 
     Posts.forEach((post) => {
-      const createdAt = new Date(post.data.created_utc * 1000);
-      const dayOfTheWeek = createdAt.getDay();
-      const hour = createdAt.getHours();
-
-      PostsPerDay[dayOfTheWeek][hour] += 1;
+      const createdAtDate = new Date(post.data.created_utc * 1000);
+      const dayOfWeek = createdAtDate.getDay();
+      const hour = createdAtDate.getHours();
+      const { data } = post;
+      PostsPerDay[dayOfWeek][hour].push({
+        title: data.title,
+        createdAt: createdAtDate,
+        score: data.score,
+        commentsNum: data.num_comments,
+        author: data.author,
+        author_id: data.author_fullname,
+        postLink: `https://www.reddit.com${data.permalink}`,
+      });
     });
+
     return PostsPerDay;
   }
 
@@ -82,7 +93,6 @@ const SubContextProvider = ({ children }) => {
     return () => controller.abort();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [subreddit]);
-
   const value = {
     subreddit,
     setSubReddit,
@@ -92,6 +102,10 @@ const SubContextProvider = ({ children }) => {
     postsPerDay,
     errorStatus,
     setErrorStatus,
+    isClicked,
+    setIsClicked,
+    arrOfPosts,
+    setArrOfPosts,
   };
   return (
     <>

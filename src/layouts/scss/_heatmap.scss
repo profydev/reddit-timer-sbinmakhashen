@@ -2,7 +2,7 @@
 
 #heatmap {
   margin-top: 52px;
-
+  width: 100%;
   .heatmap-header {
     width: 960px;
     height: 52px;
@@ -36,6 +36,8 @@
         height: 40px;
         text-align: center;
         cursor: default;
+        transform: translateY(20%);
+        // padding-top: 10px;
       }
     }
 
