@@ -1,10 +1,16 @@
 import React, { useContext } from 'react';
 import SubContext from '../../Context/SubContext';
-// import PropType from 'prop-types';
 
 // eslint-disable-next-line react/prop-types
 const PostsTable = () => {
   const { arrOfPosts } = useContext(SubContext);
+
+  function sortPosts(posts) {
+    return [...posts].sort(
+      (a, b) => a.createdAt.getMinutes() - b.createdAt.getMinutes(),
+    );
+  }
+
   return (
     <div className="posts-container">
       <h1>Posts</h1>
@@ -19,8 +25,7 @@ const PostsTable = () => {
           </tr>
         </thead>
         <tbody>
-          {arrOfPosts.map((post, i) => (
-            // console.log(post)
+          {sortPosts(arrOfPosts).map((post, i) => (
             // eslint-disable-next-line react/no-array-index-key
             <tr key={i}>
               <td>
@@ -28,7 +33,7 @@ const PostsTable = () => {
                   href={post.postLink}
                   target="_blank"
                   rel="noreferrer"
-                  className="posts-title"
+                  className="posts-link"
                 >
                   {post.title}
                 </a>
@@ -38,7 +43,28 @@ const PostsTable = () => {
               </td>
               <td>{post.score}</td>
               <td>{post.commentsNum}</td>
-              <td>{post.author}</td>
+              <td>
+                <a
+                  href={
+                    post.author !== '[deleted]'
+                      ? `https://www.reddit.com/user/${post.author}`
+                      : null
+                  }
+                  target="_blank"
+                  rel="noreferrer"
+                  className="posts-link"
+                  style={
+                    post.author === '[deleted]'
+                      ? {
+                          color: '#000',
+                          cursor: 'not-allowed',
+                        }
+                      : null
+                  }
+                >
+                  {post.author === '[deleted]' ? 'Author deleted' : post.author}
+                </a>
+              </td>
             </tr>
           ))}
         </tbody>
