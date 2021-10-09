@@ -12,7 +12,7 @@ function SearchPage() {
       <Heatmap />
       {isClicked && !isLoading && arrOfPosts.length !== 0 && <PostsTable />}
       <div style={{ marginTop: '8rem' }}>
-        {arrOfPosts.length === 0 && (
+        {arrOfPosts != null && arrOfPosts.length === 0 && (
           <p className="danger">There are no posts in this particular hour</p>
         )}
       </div>
