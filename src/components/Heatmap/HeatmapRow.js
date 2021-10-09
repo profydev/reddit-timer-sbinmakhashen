@@ -24,8 +24,6 @@ function HeatmapRow({ day, postsPerHour }) {
       e.target.classList.add('active');
       setActiveClass(false);
     }
-
-    console.log(posts);
   }
   function colorsOfNumPosts(numposts) {
     switch (numposts) {

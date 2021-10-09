@@ -1,3 +1,4 @@
+/* eslint-disable indent */
 import React, { useContext } from 'react';
 import SubContext from '../../Context/SubContext';
 
@@ -72,7 +73,4 @@ const PostsTable = () => {
     </div>
   );
 };
-// PostsTable.PropType = {
-//   // arrPosts: PropType.arrayof,
-// };
 export default PostsTable;
