@@ -33,7 +33,7 @@ const PostsTable = () => {
                 <a
                   href={post.postLink}
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   className="posts-link"
                 >
                   {post.title}
@@ -48,11 +48,11 @@ const PostsTable = () => {
                 <a
                   href={
                     post.author !== '[deleted]'
-                      ? `https://www.reddit.com/user/${post.author}`
+                      ? `https://www.reddit.com/u/${post.author}`
                       : null
                   }
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   className="posts-link"
                   style={
                     post.author === '[deleted]'
@@ -63,7 +63,7 @@ const PostsTable = () => {
                       : null
                   }
                 >
-                  {post.author === '[deleted]' ? 'Author deleted' : post.author}
+                  {post.author === '[deleted]' ? '[deleted]' : post.author}
                 </a>
               </td>
             </tr>
