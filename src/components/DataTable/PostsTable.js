@@ -48,7 +48,7 @@ const PostsTable = () => {
                 <a
                   href={
                     post.author !== '[deleted]'
-                      ? `https://www.reddit.com/u/${post.author}`
+                      ? `https://reddit.com/u/${post.author}`
                       : null
                   }
                   target="_blank"
