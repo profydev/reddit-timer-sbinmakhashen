@@ -16,15 +16,14 @@ header {
     }
 
     #nav-bar {
-      // display: none;
       width: 100%;
-      // float: right;
       margin-left: 328px;
       .nav-links {
         @include flex-center;
-        // margin: 0 rem;
-        // margin-left: 9rem;
-        // flex: 1;
+        @include mobile {
+          font-size: 0.9rem;
+        }
+
         li {
           margin: 0 12px;
           padding-top: 1.5rem;

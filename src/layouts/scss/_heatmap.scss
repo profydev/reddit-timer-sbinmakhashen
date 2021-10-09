@@ -3,6 +3,14 @@
 #heatmap {
   margin-top: 52px;
   width: 100%;
+
+  // @include laptops {
+  //   & {
+  //     width: 90%;
+  //     margin: auto;
+  //   }
+  // }
+
   .heatmap-header {
     width: 960px;
     height: 52px;

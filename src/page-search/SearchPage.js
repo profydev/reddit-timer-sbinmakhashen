@@ -9,7 +9,9 @@ function SearchPage() {
   return (
     <div id="search-page">
       <SubForm />
-      <Heatmap />
+      <div style={{ width: '80%' }} className="heatmap-content">
+        <Heatmap />
+      </div>
       {isClicked && !isLoading && arrOfPosts.length !== 0 && <PostsTable />}
       <div style={{ marginTop: '8rem' }}>
         {arrOfPosts != null && arrOfPosts.length === 0 && (

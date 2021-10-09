@@ -85,9 +85,8 @@ const SubContextProvider = ({ children }) => {
         setErrorStatus(null);
       })
       .catch((err) => {
-        if (err.name === 'AbortError') {
-          console.log('Request aborted!!');
-        } else {
+        if (err.name !== 'AbortError') {
+          // eslint-disable-next-line no-console
           setErrorStatus('errorFound');
         }
       });
