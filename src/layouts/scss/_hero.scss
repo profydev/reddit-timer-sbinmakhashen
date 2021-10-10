@@ -13,10 +13,16 @@
   margin-top: 0.4rem;
 }
 #hero {
-  @include flex-center;
   flex-direction: column;
   margin: auto;
   text-align: center;
+
+  @include mobile {
+    transform: translateX(50%);
+  }
+  @include tablets {
+    width: 80%;
+  }
 
   .hero-heading {
     margin-top: 2.1rem;

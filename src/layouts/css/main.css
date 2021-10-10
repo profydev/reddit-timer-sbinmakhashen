@@ -5,6 +5,11 @@
   padding: 0;
 }
 
+html {
+  width: 100%;
+  margin: auto;
+}
+
 body {
   background-color: #ffffff;
   color: #636363;
@@ -12,6 +17,7 @@ body {
   margin: 90px auto;
   height: 100%;
   max-width: 1440px;
+  width: 100%;
 }
 
 li {
@@ -110,6 +116,12 @@ header .nav-container #nav-bar .nav-links {
           align-items: center;
 }
 
+@media (max-width: 480px) {
+  header .nav-container #nav-bar .nav-links {
+    font-size: 0.9rem;
+  }
+}
+
 header .nav-container #nav-bar .nav-links li {
   margin: 0 12px;
   padding-top: 1.5rem;
@@ -169,21 +181,25 @@ header .nav-container #nav-bar .nav-links li {
 }
 
 #hero {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
   margin: auto;
   text-align: center;
+}
+
+@media (max-width: 480px) {
+  #hero {
+    -webkit-transform: translateX(50%);
+            transform: translateX(50%);
+  }
+}
+
+@media (min-width: 481px) and (max-width: 795px) {
+  #hero {
+    width: 80%;
+  }
 }
 
 #hero .hero-heading {
@@ -330,6 +346,7 @@ header .nav-container #nav-bar .nav-links li {
 
 #heatmap {
   margin-top: 52px;
+  width: 100%;
 }
 
 #heatmap .heatmap-header {
@@ -355,6 +372,7 @@ header .nav-container #nav-bar .nav-links li {
   font-family: 'Montserrat';
   font-weight: bold;
   padding: 0 0.8rem;
+  cursor: default;
 }
 
 #heatmap .heatmap-header-container {
@@ -384,6 +402,9 @@ header .nav-container #nav-bar .nav-links li {
   width: 154px;
   height: 40px;
   text-align: center;
+  cursor: default;
+  -webkit-transform: translateY(20%);
+          transform: translateY(20%);
 }
 
 #heatmap .heatmap-row .heatmap-btn {
@@ -398,6 +419,18 @@ header .nav-container #nav-bar .nav-links li {
 
 #heatmap .heatmap-row .heatmap-btn:hover {
   opacity: 0.8;
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+  border: 0;
+}
+
+#heatmap .heatmap-row .heatmap-btn:active {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
+#heatmap .heatmap-row .heatmap-btn.active {
+  background: #888 !important;
 }
 
 #heatmap .time {
@@ -408,5 +441,27 @@ header .nav-container #nav-bar .nav-links li {
 
 #heatmap .time-zone {
   font-weight: bold;
+}
+
+.posts-container {
+  margin: 1rem auto;
+  width: 786px;
+  height: 211px;
+}
+
+.posts-container table {
+  font-family: 'Montserrat';
+  border-collapse: collapse;
+}
+
+.posts-container td,
+.posts-container th {
+  border: 1px solid #636363;
+  text-align: center;
+  padding: 0.3rem;
+}
+
+.posts-container .posts-link {
+  color: #0087ff;
 }
 /*# sourceMappingURL=main.css.map */

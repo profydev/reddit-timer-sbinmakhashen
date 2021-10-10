@@ -1,12 +1,23 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import SubForm from './SubForm';
 import Heatmap from './Heatmap';
+import PostsTable from '../components/DataTable/PostsTable';
+import SubContext from '../Context/SubContext';
 
 function SearchPage() {
+  const { isClicked, isLoading, arrOfPosts } = useContext(SubContext);
   return (
     <div id="search-page">
       <SubForm />
-      <Heatmap />
+      <div style={{ width: '80%' }} className="heatmap-content">
+        <Heatmap />
+      </div>
+      {isClicked && !isLoading && arrOfPosts.length !== 0 && <PostsTable />}
+      <div style={{ marginTop: '8rem' }}>
+        {arrOfPosts != null && arrOfPosts.length === 0 && (
+          <p className="danger">There are no posts in this particular hour</p>
+        )}
+      </div>
     </div>
   );
 }

@@ -9,6 +9,7 @@ $colors: (
   danger: #cc3300,
   nums-color: #787878,
   weekDays: #1e2537,
+  posts-title-link: #0087ff,
 );
 
 @function color-get($color) {
@@ -19,4 +20,22 @@ $colors: (
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@mixin laptops {
+  @media (max-width: 1118px) {
+    @content;
+  }
+}
+
+@mixin tablets {
+  @media (min-width: 481px) and (max-width: 795px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: 480px) {
+    @content;
+  }
 }

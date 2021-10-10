@@ -6,6 +6,11 @@
   padding: 0;
 }
 
+html {
+  width: 100%;
+  margin: auto;
+}
+
 body {
   background-color: color-get(backgroundC);
   color: color-get(text-color);
@@ -13,6 +18,7 @@ body {
   margin: 90px auto;
   height: 100%;
   max-width: 1440px;
+  width: 100%;
 }
 
 li {
@@ -69,3 +75,4 @@ a {
 @import 'info';
 @import 'form';
 @import 'heatmap';
+@import 'posts-table';

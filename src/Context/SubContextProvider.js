@@ -9,9 +9,12 @@ const SubContextProvider = ({ children }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [postsPerDay, setPostsPerDay] = useState([]);
   const [errorStatus, setErrorStatus] = useState(null);
+  const [isClicked, setIsClicked] = useState(false);
+  const [arrOfPosts, setArrOfPosts] = useState(null);
 
   const NumPostsToFetch = 500;
   const MaxNumOfPostsPerPage = 100;
+  const controller = new AbortController();
 
   // recursive solution to get 500 posts when by default posts limit is 100 posts
   async function fetchSubredditPosts(prevPosts = [], after = null) {
@@ -20,7 +23,8 @@ const SubContextProvider = ({ children }) => {
     if (after) {
       url += `&after=${after}`;
     }
-    const res = await fetch(url);
+    const res = await fetch(url, { signal: controller.signal });
+
     const { data } = await res.json();
     // add posts to the prevPosts array after every 100 posts
     const allPosts = prevPosts.concat(data.children);
@@ -41,16 +45,25 @@ const SubContextProvider = ({ children }) => {
       .map(() =>
         Array(24)
           .fill()
-          .map(() => 0),
+          .map(() => []),
       );
 
     Posts.forEach((post) => {
-      const createdAt = new Date(post.data.created_utc * 1000);
-      const dayOfTheWeek = createdAt.getDay();
-      const hour = createdAt.getHours();
-
-      PostsPerDay[dayOfTheWeek][hour] += 1;
+      const createdAtDate = new Date(post.data.created_utc * 1000);
+      const dayOfWeek = createdAtDate.getDay();
+      const hour = createdAtDate.getHours();
+      const { data } = post;
+      PostsPerDay[dayOfWeek][hour].push({
+        title: data.title,
+        createdAt: createdAtDate,
+        score: data.score,
+        commentsNum: data.num_comments,
+        author: data.author,
+        author_id: data.author_fullname,
+        postLink: `https://www.reddit.com${data.permalink}`,
+      });
     });
+
     return PostsPerDay;
   }
 
@@ -71,10 +84,17 @@ const SubContextProvider = ({ children }) => {
         setIsLoading(false);
         setErrorStatus(null);
       })
-      .catch(() => setErrorStatus('errorFound'));
+      .catch((err) => {
+        if (err.name !== 'AbortError') {
+          // eslint-disable-next-line no-console
+          setErrorStatus('errorFound');
+        }
+      });
+    // abort when component unmounts
+    return () => controller.abort();
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [subreddit]);
-
   const value = {
     subreddit,
     setSubReddit,
@@ -84,6 +104,10 @@ const SubContextProvider = ({ children }) => {
     postsPerDay,
     errorStatus,
     setErrorStatus,
+    isClicked,
+    setIsClicked,
+    arrOfPosts,
+    setArrOfPosts,
   };
   return (
     <>
