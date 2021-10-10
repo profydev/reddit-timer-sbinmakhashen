@@ -26,3 +26,18 @@
     margin-left: 10px;
   }
 }
+
+.loading {
+  text-align: center;
+  .spinner {
+    width: 71px;
+    margin-top: 3.5rem;
+    animation: spinn 1.5s infinite linear;
+
+    @keyframes spinn {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  }
+}

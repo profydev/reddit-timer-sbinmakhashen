@@ -6,6 +6,11 @@
   padding: 0;
 }
 
+html {
+  width: 100%;
+  margin: auto;
+}
+
 body {
   background-color: color-get(backgroundC);
   color: color-get(text-color);
@@ -13,6 +18,7 @@ body {
   margin: 90px auto;
   height: 100%;
   max-width: 1440px;
+  width: 100%;
 }
 
 li {
@@ -55,8 +61,18 @@ a {
   margin-top: 0.4rem;
 }
 
+.danger {
+  text-align: center;
+  margin-top: 0.8rem;
+  color: color-get(danger);
+  font-weight: 600;
+  font-family: 'Montserrat';
+}
+
 @import './header';
 @import 'footer';
 @import 'hero';
 @import 'info';
 @import 'form';
+@import 'heatmap';
+@import 'posts-table';

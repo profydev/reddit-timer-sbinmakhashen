@@ -32,6 +32,9 @@ header {
       margin-left: 328px;
       .nav-links {
         @include flex-center;
+        @include mobile {
+          font-size: 0.9rem;
+        }
 
         li {
           margin: 0 12px;

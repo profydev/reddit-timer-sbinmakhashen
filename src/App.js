@@ -6,7 +6,7 @@ import './layouts/css/main.css';
 import Footer from './components/Footer';
 import Hero from './components/Hero';
 import Info from './components/Info/Info';
-import SubForm from './components/SubredditForm/SubForm';
+import SearchPage from './page-search/SearchPage';
 
 function App() {
   return (
@@ -20,7 +20,7 @@ function App() {
               <Info />
             </Route>
             <Route path="/search/:sub">
-              <SubForm />
+              <SearchPage />
             </Route>
           </Switch>
         </main>
