@@ -14,10 +14,9 @@
   right: 0px;
   top: 1310px;
   @include mobile {
-    right: -100%;
-    justify-content: center;
+    left: 40%;
+    width: 100%;
   }
-
 
   a {
     display: inline;

@@ -251,10 +251,8 @@ header .nav-container #nav-bar .nav-links li {
 
 @media (max-width: 480px) {
   #footer {
-    right: -100%;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    left: 40%;
+    width: 100%;
   }
 }
 
@@ -759,6 +757,13 @@ header .nav-container #nav-bar .nav-links li {
   margin: 1rem auto;
   width: 786px;
   height: 211px;
+}
+
+@media (min-width: 481px) and (max-width: 786px) {
+  .posts-container {
+    width: 686px;
+    height: 200px;
+  }
 }
 
 .posts-container table {

@@ -4,6 +4,12 @@
   margin: 1rem auto;
   width: 786px;
   height: 211px;
+
+  @include tablet {
+    width: 686px;
+    height: 200px;
+  }
+
   table {
     font-family: 'Montserrat';
     border-collapse: collapse;
