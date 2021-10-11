@@ -1,9 +1,11 @@
 @import 'config';
 header {
   background: color-get(backgroundC);
+  // background: #ffffff;
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: 7;
   @include tablet {
     margin-left: -70px;
     width: 100%;
@@ -13,6 +15,7 @@ header {
   }
 
   .nav-container {
+    // background: #444;
     @include flex-center;
     justify-content: space-between;
     width: 100%;

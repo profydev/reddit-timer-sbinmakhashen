@@ -43,6 +43,12 @@
 
 .loading {
   text-align: center;
+  transform: translateX(10%);
+
+  @include mobile {
+    transform: translateX(35%);
+  }
+
   .spinner {
     width: 71px;
     margin-top: 3.5rem;
@@ -52,6 +58,10 @@
       to {
         transform: rotate(360deg);
       }
+    }
+
+    @include mobile {
+      width: 50px;
     }
   }
 }
