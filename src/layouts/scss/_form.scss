@@ -1,6 +1,11 @@
 #form {
   text-align: center;
   padding-top: 32px;
+  @include mobile {
+    margin: auto;
+    transform: translateX(15%);
+  }
+
   .title {
     padding-bottom: 27px;
   }
@@ -19,11 +24,20 @@
     font-size: 14px;
     font-family: 'Montserrat';
     width: 370px;
+
+    @include mobile-sm {
+      font-size: 10px;
+      width: 350px;
+    }
   }
 
   .form-btn {
     width: 92px;
     margin-left: 10px;
+
+    @include mobile {
+      margin-top: 0.8rem;
+    }
   }
 }
 

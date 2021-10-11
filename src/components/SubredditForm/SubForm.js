@@ -7,7 +7,7 @@ const SubForm = () => {
   const {
     subreddit, setSubReddit, fetchRedditPosts, setIsLoading, isLoading,
   } = useContext(SubContext);
-  
+
   const history = useHistory();
   function handleSubmit(event) {
     event.preventDefault();

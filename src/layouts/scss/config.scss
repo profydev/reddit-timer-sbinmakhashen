@@ -22,6 +22,12 @@ $colors: (
   align-items: center;
 }
 
+@mixin laptop-lg {
+  @media (min-width: 1025px) and (max-width: 1390px) {
+    @content;
+  }
+}
+
 @mixin laptop {
   @media (max-width: 1024px) {
     @content;
@@ -36,6 +42,12 @@ $colors: (
 
 @mixin mobile {
   @media (max-width: 480px) {
+    @content;
+  }
+}
+
+@mixin mobile-sm {
+  @media (max-width: 320px) {
     @content;
   }
 }

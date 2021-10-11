@@ -47,11 +47,37 @@ a {
   border-radius: 4px;
 }
 
+@media (max-width: 320px) {
+  .btn {
+    width: 200px;
+    height: 30px;
+    font-size: 12px;
+  }
+}
+
 .title {
   font-size: 38px;
   font-family: 'Bitter';
   color: #000000;
   font-weight: unset;
+}
+
+@media (min-width: 481px) and (max-width: 786px) {
+  .title {
+    font-size: 1.8rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.4rem !important;
+  }
+}
+
+@media (max-width: 320px) {
+  .title {
+    font-size: 1.1rem !important;
+  }
 }
 
 .subtitle {
@@ -62,11 +88,33 @@ a {
 }
 
 .danger {
+  -webkit-transform: translateX(10%);
+          transform: translateX(10%);
   text-align: center;
   margin-top: 0.8rem;
   color: #cc3300;
   font-weight: 600;
   font-family: 'Montserrat';
+}
+
+@media (min-width: 481px) and (max-width: 786px) {
+  .danger {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .danger {
+    font-size: 0.7rem;
+    -webkit-transform: translateX(30%);
+            transform: translateX(30%);
+  }
+}
+
+@media (max-width: 320px) {
+  .danger {
+    font-size: 0.6rem;
+  }
 }
 
 header {
@@ -112,6 +160,24 @@ header .nav-container .logo {
   margin-top: 1.6rem;
 }
 
+@media (min-width: 481px) and (max-width: 786px) {
+  header .nav-container .logo {
+    width: 130px;
+  }
+}
+
+@media (max-width: 480px) {
+  header .nav-container .logo {
+    width: 129px;
+  }
+}
+
+@media (max-width: 320px) {
+  header .nav-container .logo {
+    width: 110px;
+  }
+}
+
 header .nav-container #nav-bar {
   width: 100%;
   margin-left: 328px;
@@ -129,15 +195,36 @@ header .nav-container #nav-bar .nav-links {
           align-items: center;
 }
 
+@media (min-width: 481px) and (max-width: 786px) {
+  header .nav-container #nav-bar .nav-links {
+    font-size: 0.8rem;
+    margin-left: -15rem;
+  }
+}
+
 @media (max-width: 480px) {
   header .nav-container #nav-bar .nav-links {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
+    margin-left: -15rem;
+  }
+}
+
+@media (max-width: 320px) {
+  header .nav-container #nav-bar .nav-links {
+    font-size: 0.7rem;
+    margin-left: -25rem;
   }
 }
 
 header .nav-container #nav-bar .nav-links li {
   margin: 0 12px;
   padding-top: 1.5rem;
+}
+
+@media (min-width: 481px) and (max-width: 786px) {
+  header .nav-container #nav-bar .nav-links li {
+    margin: 0 0.5rem;
+  }
 }
 
 #footer {
@@ -224,7 +311,6 @@ header .nav-container #nav-bar .nav-links li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -353,6 +439,14 @@ header .nav-container #nav-bar .nav-links li {
   padding-top: 32px;
 }
 
+@media (max-width: 480px) {
+  #form {
+    margin: auto;
+    -webkit-transform: translateX(15%);
+            transform: translateX(15%);
+  }
+}
+
 #form .title {
   padding-bottom: 27px;
 }
@@ -373,9 +467,22 @@ header .nav-container #nav-bar .nav-links li {
   width: 370px;
 }
 
+@media (max-width: 320px) {
+  #form #sub-input {
+    font-size: 10px;
+    width: 350px;
+  }
+}
+
 #form .form-btn {
   width: 92px;
   margin-left: 10px;
+}
+
+@media (max-width: 480px) {
+  #form .form-btn {
+    margin-top: 0.8rem;
+  }
 }
 
 .loading {
@@ -405,7 +512,22 @@ header .nav-container #nav-bar .nav-links li {
 
 #heatmap {
   margin-top: 52px;
+  -webkit-transform: translateX(12%);
+          transform: translateX(12%);
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 #heatmap .heatmap-header {
@@ -424,6 +546,13 @@ header .nav-container #nav-bar .nav-links li {
   margin: auto;
 }
 
+@media (min-width: 1025px) and (max-width: 1390px) {
+  #heatmap .heatmap-header {
+    width: 720px;
+    margin-right: 2rem;
+  }
+}
+
 #heatmap .heatmap-header .hr-of-posts {
   color: #787878;
   font-size: 14px;
@@ -432,6 +561,13 @@ header .nav-container #nav-bar .nav-links li {
   font-weight: bold;
   padding: 0 0.8rem;
   cursor: default;
+}
+
+@media (min-width: 1025px) and (max-width: 1390px) {
+  #heatmap .heatmap-header .hr-of-posts {
+    padding: 0 0.3rem;
+    font-size: 0.8rem;
+  }
 }
 
 #heatmap .heatmap-header-container {
@@ -466,6 +602,20 @@ header .nav-container #nav-bar .nav-links li {
           transform: translateY(20%);
 }
 
+@media (min-width: 1025px) and (max-width: 1390px) {
+  #heatmap .heatmap-row .daysOfWeek-container .day {
+    width: 120px;
+    height: 30px;
+  }
+}
+
+@media (max-width: 1024px) {
+  #heatmap .heatmap-row .daysOfWeek-container .day {
+    width: 125px;
+    height: 35px;
+  }
+}
+
 #heatmap .heatmap-row .heatmap-btn {
   width: 40px;
   height: 40px;
@@ -474,6 +624,20 @@ header .nav-container #nav-bar .nav-links li {
   font-size: 700;
   text-align: center;
   border: 0;
+}
+
+@media (min-width: 1025px) and (max-width: 1390px) {
+  #heatmap .heatmap-row .heatmap-btn {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media (max-width: 1024px) {
+  #heatmap .heatmap-row .heatmap-btn {
+    width: 29px;
+    height: 29px;
+  }
 }
 
 #heatmap .heatmap-row .heatmap-btn:hover {
