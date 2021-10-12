@@ -24,7 +24,9 @@ function App() {
             </Route>
           </Switch>
         </main>
-        <Footer />
+        <footer>
+          <Footer />
+        </footer>
       </Router>
     </SubContextProvider>
   );

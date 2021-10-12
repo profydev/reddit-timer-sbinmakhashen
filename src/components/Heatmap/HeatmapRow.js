@@ -4,7 +4,6 @@ import SubContext from '../../Context/SubContext';
 
 function HeatmapRow({ day, postsPerHour }) {
   const [activeClass, setActiveClass] = useState(true);
-  // const [arrOfPosts, setArrOfPosts] = useState(null);
   const { setIsClicked, setArrOfPosts } = useContext(SubContext);
 
   const daysOfTheWeek = [
@@ -22,7 +21,6 @@ function HeatmapRow({ day, postsPerHour }) {
     setArrOfPosts(posts);
     if (activeClass) {
       e.target.classList.add('active');
-      setActiveClass(false);
     }
   }
   function colorsOfNumPosts(numposts) {

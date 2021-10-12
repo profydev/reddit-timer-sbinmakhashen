@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import FooterLogo from './FooterLogo';
 
 const Footer = () => (
-  <footer id="footer">
+  <div id="footer">
     <a
       href="https://profy.dev/employers"
       target="_blank"
@@ -18,7 +18,7 @@ const Footer = () => (
     <Link to="/terms">
       <p className="footer-link"> Terms & Privacy</p>
     </Link>
-  </footer>
+  </div>
 );
 
 export default Footer;

@@ -1,35 +1,30 @@
 @import './config.scss';
 
-#footer {
-  @include flex-center;
-  margin: auto;
-  padding: 1rem 0;
-  // width: 52%;
-  width: 52%;
-  background: color-get(backgroundC);
-  position: absolute;
-  // width: 1440px;
-  height: 100px;
-  left: 0px;
-  right: 0px;
-  top: 1310px;
-  @include mobile {
-    left: 40%;
+footer {
+  display: block;
+  width: 100%;
+  #footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    padding: 0.5rem 0;
     width: 100%;
-  }
+    @include flex-center;
+    background: color-get(backgroundC);
 
-  a {
-    display: inline;
-    text-decoration: none;
-    color: inherit;
-    margin: 0 1.6rem;
-  }
-  .logoF {
-    padding-left: 0.7rem;
-    padding-top: 0.5rem;
-  }
+    a {
+      display: inline;
+      text-decoration: none;
+      color: inherit;
+      margin: 0 1.6rem;
+    }
+    .logoF {
+      padding-left: 0.7rem;
+      padding-top: 0.5rem;
+    }
 
-  .footer-link {
-    flex: 1;
+    .footer-link {
+      flex: 1;
+    }
   }
 }

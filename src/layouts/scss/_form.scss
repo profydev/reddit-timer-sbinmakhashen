@@ -43,10 +43,12 @@
 
 .loading {
   text-align: center;
-  transform: translateX(10%);
 
   @include mobile {
-    transform: translateX(35%);
+    transform: translateX(15%);
+  }
+  @include tablet {
+    transform: translateX(0);
   }
 
   .spinner {

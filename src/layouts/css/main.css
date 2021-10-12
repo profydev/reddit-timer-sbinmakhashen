@@ -88,8 +88,6 @@ a {
 }
 
 .danger {
-  -webkit-transform: translateX(10%);
-          transform: translateX(10%);
   text-align: center;
   margin-top: 0.8rem;
   color: #cc3300;
@@ -106,8 +104,8 @@ a {
 @media (max-width: 480px) {
   .danger {
     font-size: 0.7rem;
-    -webkit-transform: translateX(30%);
-            transform: translateX(30%);
+    -webkit-transform: translateX(10%);
+            transform: translateX(10%);
   }
 }
 
@@ -228,7 +226,17 @@ header .nav-container #nav-bar .nav-links li {
   }
 }
 
-#footer {
+footer {
+  display: block;
+  width: 100%;
+}
+
+footer #footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  padding: 0.5rem 0;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -238,37 +246,22 @@ header .nav-container #nav-bar .nav-links li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: auto;
-  padding: 1rem 0;
-  width: 52%;
   background: #ffffff;
-  position: absolute;
-  height: 100px;
-  left: 0px;
-  right: 0px;
-  top: 1310px;
 }
 
-@media (max-width: 480px) {
-  #footer {
-    left: 40%;
-    width: 100%;
-  }
-}
-
-#footer a {
+footer #footer a {
   display: inline;
   text-decoration: none;
   color: inherit;
   margin: 0 1.6rem;
 }
 
-#footer .logoF {
+footer #footer .logoF {
   padding-left: 0.7rem;
   padding-top: 0.5rem;
 }
 
-#footer .footer-link {
+footer #footer .footer-link {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -486,14 +479,19 @@ header .nav-container #nav-bar .nav-links li {
 
 .loading {
   text-align: center;
-  -webkit-transform: translateX(10%);
-          transform: translateX(10%);
 }
 
 @media (max-width: 480px) {
   .loading {
-    -webkit-transform: translateX(35%);
-            transform: translateX(35%);
+    -webkit-transform: translateX(15%);
+            transform: translateX(15%);
+  }
+}
+
+@media (min-width: 481px) and (max-width: 786px) {
+  .loading {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
 }
 
@@ -757,12 +755,14 @@ header .nav-container #nav-bar .nav-links li {
   margin: 1rem auto;
   width: 786px;
   height: 211px;
+  height: 100%;
+  display: block;
+  overflow: auto;
 }
 
 @media (min-width: 481px) and (max-width: 786px) {
   .posts-container {
     width: 686px;
-    height: 200px;
   }
 }
 
@@ -780,5 +780,9 @@ header .nav-container #nav-bar .nav-links li {
 
 .posts-container .posts-link {
   color: #0087ff;
+}
+
+.posts-container .posts-link:hover {
+  text-decoration: underline;
 }
 /*# sourceMappingURL=main.css.map */
