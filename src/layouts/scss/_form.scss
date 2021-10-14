@@ -1,6 +1,11 @@
 #form {
   text-align: center;
   padding-top: 32px;
+  @include mobile {
+    margin: auto;
+    transform: translateX(15%);
+  }
+
   .title {
     padding-bottom: 27px;
   }
@@ -19,16 +24,33 @@
     font-size: 14px;
     font-family: 'Montserrat';
     width: 370px;
+
+    @include mobile-sm {
+      font-size: 10px;
+      width: 350px;
+    }
   }
 
   .form-btn {
     width: 92px;
     margin-left: 10px;
+
+    @include mobile {
+      margin-top: 0.8rem;
+    }
   }
 }
 
 .loading {
   text-align: center;
+
+  @include mobile {
+    transform: translateX(15%);
+  }
+  @include tablet {
+    transform: translateX(0);
+  }
+
   .spinner {
     width: 71px;
     margin-top: 3.5rem;
@@ -38,6 +60,10 @@
       to {
         transform: rotate(360deg);
       }
+    }
+
+    @include mobile {
+      width: 50px;
     }
   }
 }

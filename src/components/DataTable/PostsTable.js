@@ -59,6 +59,7 @@ const PostsTable = () => {
                       ? {
                           color: '#000',
                           cursor: 'not-allowed',
+                          textDecoration: 'none',
                         }
                       : null
                   }

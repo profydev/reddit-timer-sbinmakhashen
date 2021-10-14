@@ -5,24 +5,38 @@
   font-family: 'Bitter';
   color: color-get(title);
   font-weight: unset;
+
+  @include mobile {
+    font-size: 1.5rem;
+  }
 }
 .subtitle {
   font-family: 'Montserrat';
   font-size: 1rem;
   color: color-get(subtitle);
   margin-top: 0.4rem;
+  @include mobile {
+    font-size: 0.8rem;
+  }
 }
 #hero {
+  @include flex-center;
   flex-direction: column;
   margin: auto;
   text-align: center;
+  width: 100%;
+  @include tablet {
+    transform: translateX(20%);
+    margin: auto;
+  }
 
   @include mobile {
     transform: translateX(50%);
   }
-  @include tablets {
-    width: 80%;
-  }
+
+  // @include tablets {
+  //   width: 80%;
+  // }
 
   .hero-heading {
     margin-top: 2.1rem;

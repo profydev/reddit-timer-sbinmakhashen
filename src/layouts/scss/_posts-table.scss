@@ -4,6 +4,14 @@
   margin: 1rem auto;
   width: 786px;
   height: 211px;
+  height: 100%;
+  display: block;
+  overflow: auto;
+
+  @include tablet {
+    width: 686px;
+  }
+
   table {
     font-family: 'Montserrat';
     border-collapse: collapse;
@@ -18,5 +26,8 @@
 
   .posts-link {
     color: color-get(posts-title-link);
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }

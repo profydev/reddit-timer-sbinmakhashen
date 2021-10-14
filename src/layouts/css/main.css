@@ -47,11 +47,37 @@ a {
   border-radius: 4px;
 }
 
+@media (max-width: 320px) {
+  .btn {
+    width: 200px;
+    height: 30px;
+    font-size: 12px;
+  }
+}
+
 .title {
   font-size: 38px;
   font-family: 'Bitter';
   color: #000000;
   font-weight: unset;
+}
+
+@media (min-width: 481px) and (max-width: 786px) {
+  .title {
+    font-size: 1.8rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.4rem !important;
+  }
+}
+
+@media (max-width: 320px) {
+  .title {
+    font-size: 1.1rem !important;
+  }
 }
 
 .subtitle {
@@ -69,11 +95,45 @@ a {
   font-family: 'Montserrat';
 }
 
+@media (min-width: 481px) and (max-width: 786px) {
+  .danger {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .danger {
+    font-size: 0.7rem;
+    -webkit-transform: translateX(10%);
+            transform: translateX(10%);
+  }
+}
+
+@media (max-width: 320px) {
+  .danger {
+    font-size: 0.6rem;
+  }
+}
+
 header {
   background: #ffffff;
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: 7;
+}
+
+@media (min-width: 481px) and (max-width: 786px) {
+  header {
+    margin-left: -70px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    margin-left: -70px;
+  }
 }
 
 header .nav-container {
@@ -99,6 +159,24 @@ header .nav-container .logo {
   margin-top: 1.6rem;
 }
 
+@media (min-width: 481px) and (max-width: 786px) {
+  header .nav-container .logo {
+    width: 130px;
+  }
+}
+
+@media (max-width: 480px) {
+  header .nav-container .logo {
+    width: 129px;
+  }
+}
+
+@media (max-width: 320px) {
+  header .nav-container .logo {
+    width: 110px;
+  }
+}
+
 header .nav-container #nav-bar {
   width: 100%;
   margin-left: 328px;
@@ -116,9 +194,24 @@ header .nav-container #nav-bar .nav-links {
           align-items: center;
 }
 
+@media (min-width: 481px) and (max-width: 786px) {
+  header .nav-container #nav-bar .nav-links {
+    font-size: 0.8rem;
+    margin-left: -15rem;
+  }
+}
+
 @media (max-width: 480px) {
   header .nav-container #nav-bar .nav-links {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
+    margin-left: -15rem;
+  }
+}
+
+@media (max-width: 320px) {
+  header .nav-container #nav-bar .nav-links {
+    font-size: 0.7rem;
+    margin-left: -25rem;
   }
 }
 
@@ -127,7 +220,23 @@ header .nav-container #nav-bar .nav-links li {
   padding-top: 1.5rem;
 }
 
-#footer {
+@media (min-width: 481px) and (max-width: 786px) {
+  header .nav-container #nav-bar .nav-links li {
+    margin: 0 0.5rem;
+  }
+}
+
+footer {
+  display: block;
+  width: 100%;
+}
+
+footer #footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  padding: 0.5rem 0;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -137,30 +246,22 @@ header .nav-container #nav-bar .nav-links li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: auto;
-  padding: 1rem 0;
-  width: 52%;
   background: #ffffff;
-  position: absolute;
-  height: 100px;
-  left: 0px;
-  right: 0;
-  top: 1310px;
 }
 
-#footer a {
+footer #footer a {
   display: inline;
   text-decoration: none;
   color: inherit;
   margin: 0 1.6rem;
 }
 
-#footer .logoF {
+footer #footer .logoF {
   padding-left: 0.7rem;
   padding-top: 0.5rem;
 }
 
-#footer .footer-link {
+footer #footer .footer-link {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -173,6 +274,12 @@ header .nav-container #nav-bar .nav-links li {
   font-weight: unset;
 }
 
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.5rem;
+  }
+}
+
 .subtitle {
   font-family: 'Montserrat';
   font-size: 1rem;
@@ -180,25 +287,43 @@ header .nav-container #nav-bar .nav-links li {
   margin-top: 0.4rem;
 }
 
+@media (max-width: 480px) {
+  .subtitle {
+    font-size: 0.8rem;
+  }
+}
+
 #hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
   margin: auto;
   text-align: center;
+  width: 100%;
+}
+
+@media (min-width: 481px) and (max-width: 786px) {
+  #hero {
+    -webkit-transform: translateX(20%);
+            transform: translateX(20%);
+    margin: auto;
+  }
 }
 
 @media (max-width: 480px) {
   #hero {
     -webkit-transform: translateX(50%);
             transform: translateX(50%);
-  }
-}
-
-@media (min-width: 481px) and (max-width: 795px) {
-  #hero {
-    width: 80%;
   }
 }
 
@@ -263,6 +388,18 @@ header .nav-container #nav-bar .nav-links li {
   margin-top: 95px;
 }
 
+@media (max-width: 480px) {
+  .info {
+    padding-left: 2rem;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 786px) {
+  .info {
+    padding-left: 2rem;
+  }
+}
+
 .info .title-section {
   font-size: 24px;
 }
@@ -294,6 +431,14 @@ header .nav-container #nav-bar .nav-links li {
   padding-top: 32px;
 }
 
+@media (max-width: 480px) {
+  #form {
+    margin: auto;
+    -webkit-transform: translateX(15%);
+            transform: translateX(15%);
+  }
+}
+
 #form .title {
   padding-bottom: 27px;
 }
@@ -314,13 +459,40 @@ header .nav-container #nav-bar .nav-links li {
   width: 370px;
 }
 
+@media (max-width: 320px) {
+  #form #sub-input {
+    font-size: 10px;
+    width: 350px;
+  }
+}
+
 #form .form-btn {
   width: 92px;
   margin-left: 10px;
 }
 
+@media (max-width: 480px) {
+  #form .form-btn {
+    margin-top: 0.8rem;
+  }
+}
+
 .loading {
   text-align: center;
+}
+
+@media (max-width: 480px) {
+  .loading {
+    -webkit-transform: translateX(15%);
+            transform: translateX(15%);
+  }
+}
+
+@media (min-width: 481px) and (max-width: 786px) {
+  .loading {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
 }
 
 .loading .spinner {
@@ -344,9 +516,28 @@ header .nav-container #nav-bar .nav-links li {
   }
 }
 
+@media (max-width: 480px) {
+  .loading .spinner {
+    width: 50px;
+  }
+}
+
 #heatmap {
   margin-top: 52px;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 #heatmap .heatmap-header {
@@ -365,6 +556,27 @@ header .nav-container #nav-bar .nav-links li {
   margin: auto;
 }
 
+@media (min-width: 1025px) and (max-width: 1390px) {
+  #heatmap .heatmap-header {
+    width: 720px;
+    margin-right: 2rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  #heatmap .heatmap-header {
+    width: 535px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  #heatmap .heatmap-header {
+    width: 100%;
+    height: 40px;
+  }
+}
+
 #heatmap .heatmap-header .hr-of-posts {
   color: #787878;
   font-size: 14px;
@@ -375,8 +587,48 @@ header .nav-container #nav-bar .nav-links li {
   cursor: default;
 }
 
+@media (min-width: 1025px) and (max-width: 1390px) {
+  #heatmap .heatmap-header .hr-of-posts {
+    padding: 0 0.3rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  #heatmap .heatmap-header .hr-of-posts {
+    padding: 0 0.2rem;
+    font-size: 0.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #heatmap .heatmap-header .hr-of-posts {
+    padding: 0 0.1rem;
+    font-size: 0.6rem;
+  }
+}
+
 #heatmap .heatmap-header-container {
   margin-left: 9.5rem;
+}
+
+@media (max-width: 1024px) {
+  #heatmap .heatmap-header-container {
+    margin-left: 7.5rem;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 786px) {
+  #heatmap .heatmap-header-container {
+    margin-left: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #heatmap .heatmap-header-container {
+    margin: auto;
+    padding-right: 10rem;
+  }
 }
 
 #heatmap .heatmap-row {
@@ -389,6 +641,13 @@ header .nav-container #nav-bar .nav-links li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media (max-width: 480px) {
+  #heatmap .heatmap-row {
+    margin: auto;
+    width: 100%;
+  }
 }
 
 #heatmap .heatmap-row .daysOfWeek-container {
@@ -407,6 +666,41 @@ header .nav-container #nav-bar .nav-links li {
           transform: translateY(20%);
 }
 
+@media (min-width: 1025px) and (max-width: 1390px) {
+  #heatmap .heatmap-row .daysOfWeek-container .day {
+    width: 120px;
+    height: 30px;
+  }
+}
+
+@media (max-width: 1024px) {
+  #heatmap .heatmap-row .daysOfWeek-container .day {
+    width: 115px;
+    height: 28px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 786px) {
+  #heatmap .heatmap-row .daysOfWeek-container .day {
+    width: 100px;
+    height: 56px;
+    font-size: 0.7rem;
+    -webkit-transform: translateY(40%);
+            transform: translateY(40%);
+  }
+}
+
+@media (max-width: 480px) {
+  #heatmap .heatmap-row .daysOfWeek-container .day {
+    width: 90px;
+    height: 84px;
+    font-size: 0.7rem;
+    -webkit-transform: translateY(40%);
+            transform: translateY(40%);
+  }
+}
+
 #heatmap .heatmap-row .heatmap-btn {
   width: 40px;
   height: 40px;
@@ -415,6 +709,20 @@ header .nav-container #nav-bar .nav-links li {
   font-size: 700;
   text-align: center;
   border: 0;
+}
+
+@media (min-width: 1025px) and (max-width: 1390px) {
+  #heatmap .heatmap-row .heatmap-btn {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media (max-width: 1024px) {
+  #heatmap .heatmap-row .heatmap-btn {
+    width: 22px;
+    height: 28px;
+  }
 }
 
 #heatmap .heatmap-row .heatmap-btn:hover {
@@ -447,6 +755,15 @@ header .nav-container #nav-bar .nav-links li {
   margin: 1rem auto;
   width: 786px;
   height: 211px;
+  height: 100%;
+  display: block;
+  overflow: auto;
+}
+
+@media (min-width: 481px) and (max-width: 786px) {
+  .posts-container {
+    width: 686px;
+  }
 }
 
 .posts-container table {
@@ -463,5 +780,9 @@ header .nav-container #nav-bar .nav-links li {
 
 .posts-container .posts-link {
   color: #0087ff;
+}
+
+.posts-container .posts-link:hover {
+  text-decoration: underline;
 }
 /*# sourceMappingURL=main.css.map */

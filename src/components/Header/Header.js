@@ -6,6 +6,7 @@ import Logo from './Logo';
 
 const Header = () => {
   const { subreddit } = useContext(SubContext);
+
   return (
     <>
       <header>
