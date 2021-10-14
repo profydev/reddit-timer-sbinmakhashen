@@ -1,68 +1,114 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h1 align="center">Welcome to Reddit Timer App 👋</h1>
+<p>
+  <a href="#" target="_blank" rel="noopener">
+  <img src="./src/img/home_page.png" alt="Home Screen web app" title="Home screen">
+  </a>
+</p>
 
-## Available Scripts
+<blockquote>
+  <p>
+    Users can use a heatmap to see the best day and time to post a subreddit
+  </p>
+</blockquote>
 
-In the project directory, you can run:
+<p>
+  <a href="#" target="_blank" rel="noopener">
+  <img src="./src/img/search_page.png" alt="Search Page web app" title="Search page">
+  </a>
+</p>
 
-### `yarn start`
+<blockquote>
+  <p>
+    Searched subreddit is loading ◜◞
+  </p>
+</blockquote>
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<h2>About Reddit Timer 👇</h2>
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+<p>
+  I have implemented this project in the context of a course at 
+  <a href="https://profy.dev/" rel="nofollow">profy.dev</a>.
+  This course minics a professional real-world developement enviorment.
+</p>
 
-### `yarn test`
+<p>
+  The designs were provided via <a href="https://www.figma.com/" rel="nofollow">Figma<a/>.
+  The project was split into small tasks using <a href="https://clickup.com/features/kanban-board" rel="nofollow">Clickup (kanban board)</a> as a project management tool. I created a pull request for every task. The code was reviewed line by line by <a href="https://jkettmann.com/" rel="nofollow"></a>, a senior developer.
+</p>
+  
+<p>
+In this project I have been exposed to many practical techniques that I wouldn't have learned otherwise. Examples as following but not limit to:
+</p>
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<ul>
+  <li><b>Creating pixel-perfect designs</b></li>
+  <li><b>Planning and implementing a complex UI component</b></li>
+  <li><b>Implement data fetching with error handling</b></li>
+  <li><b>Debugging inside an IDE</b></li>
+  <li><b>Writing integration tests</b></li>
+  <li><b>Professional Git workflow with pull requests</b></li>
+  <li><b>Code reviews</b></li>
+  <li><b>Continuous integration</b></li>
+</ul>
 
-### `yarn build`
+<p>
+I was free to choose any technical stack, packages, and coding styles to finish the project as long as I met the acceptance criteria of a given task. The only limitation was to use React.
+</p>
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<p>
+  The code reviews gave me insights into best practices to follow (see <a href="https://github.com/profydev/reddit-timer-sbinmakhashen/pull/8">this example</a>). I was able to learn a lot and evolve my front-end knowledge rapidly.
+</p>
+  
+  
+<h2>
+  Tech Stack
+</h2>
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+<ul>
+  <li>React (Hooks)</li>
+  <li>React Context</li>
+  <li>SASS</li>
+</ul>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<h2>
+Tools Use for the Project 
+</h2>
 
-### `yarn eject`
+<ul>
+  <li><a href="https://www.figma.com/" rel>Figma</a> - Where the design from</li>
+  <li><a href="https://chrome.google.com/webstore/detail/perfectpixel-by-welldonec/dkaagdgjmgdmbnecmcefdhjekcoceebi?hl=en" rel="nofollow">Perfect Pixel</a> - to help with creating pixel perfect layout</li>
+  <li><a href="https://clickup.com/features/kanban-board" rel="nofollow">ClickUp</a> - for Project Management</li>
+  <li>Github - Version control and team collaboration</li>
+</ul>
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+<h3>
+Install 
+</h3>
+<pre>yarn install</pre>
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<h3>
+Usage 
+</h3>
+<pre>
+yarn start
+</pre>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+<h3>
+  Run test 
+</h3>
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+<pre>
+  yarn test
+</pre>
 
-## Learn More
+<h2>
+Author 
+</h2>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<h4>Salem Binmakhashen</h4>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+<ul>
+  <li><a href="https://salembinmakhashen.netlify.app/" rel="nofollow">Website</a></li>
+  <li><a href="https://twitter.com/dreamchaser032" rel="nofollow">Twitter</a></li>
+  <li><a href="https://salembinmakhashen.netlify.app/" rel="nofollow">LinkedIn</a></li>
+</ul>

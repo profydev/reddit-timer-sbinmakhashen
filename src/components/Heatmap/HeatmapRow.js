@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import SubContext from '../../Context/SubContext';
 
 function HeatmapRow({ day, postsPerHour }) {
+  // eslint-disable-next-line no-unused-vars
   const [activeClass, setActiveClass] = useState(true);
   const { setIsClicked, setArrOfPosts } = useContext(SubContext);
 
