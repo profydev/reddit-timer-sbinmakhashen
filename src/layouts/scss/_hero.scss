@@ -31,12 +31,9 @@
   }
 
   @include mobile {
-    transform: translateX(50%);
+    justify-content: right;
+    width: 100%;
   }
-
-  // @include tablets {
-  //   width: 80%;
-  // }
 
   .hero-heading {
     margin-top: 2.1rem;
@@ -88,6 +85,9 @@
     .hero-img {
       margin: 2rem auto;
       max-width: 100%;
+      @include mobile {
+        width: 98%;
+      }
     }
   }
 }

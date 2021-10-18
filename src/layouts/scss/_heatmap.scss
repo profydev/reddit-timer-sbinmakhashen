@@ -6,7 +6,7 @@
   @include flex-center;
   flex-direction: column;
 
-  .heatmap-header {
+  .heatmap-header-container {
     width: 960px;
     height: 52px;
     @include flex-center;
@@ -23,44 +23,54 @@
     @include mobile {
       width: 100%;
       height: 40px;
+      justify-content: left;
     }
 
-    .hr-of-posts {
-      color: color-get(nums-color);
-      font-size: 14px;
-      text-align: center;
-      font-family: 'Montserrat';
-      font-weight: bold;
-      padding: 0 0.8rem;
-      cursor: default;
-      @include laptop-lg {
-        padding: 0 0.3rem;
-        font-size: 0.8rem;
-      }
-      @include laptop {
-        padding: 0 0.2rem;
-        font-size: 0.6rem;
-      }
-      @include mobile {
-        padding: 0 0.1rem;
-        font-size: 0.6rem;
-      }
-    }
-  }
-  .heatmap-header-container {
-    margin-left: 9.5rem;
-
-    @include laptop {
-      margin-left: 7.5rem;
-    }
-    @include tablet {
-      margin-left: 2rem;
-    }
-    @include mobile {
+    .heatmap-header {
+      display: flex;
+      width: 100%;
       margin: auto;
-      padding-right: 10rem;
+      // @include mobile {
+      //   font-size: 0.4rem;
+      // }
+
+      .hr-of-posts {
+        color: color-get(nums-color);
+        font-size: 14px;
+        text-align: center;
+        font-family: 'Montserrat';
+        font-weight: bold;
+        padding: 0 0.8rem;
+        cursor: default;
+        @include laptop-lg {
+          padding: 0 0.3rem;
+          font-size: 0.8rem;
+        }
+        @include laptop {
+          padding: 0 0.2rem;
+          font-size: 0.6rem;
+        }
+        @include mobile {
+          font-size: 0.4rem;
+          padding: 0 0.1rem;
+        }
+      }
     }
   }
+  // .heatmap-header-container {
+  //   margin-left: 9.5rem;
+
+  //   @include laptop {
+  //     margin-left: 7.5rem;
+  //   }
+  //   @include tablet {
+  //     margin-left: 2rem;
+  //   }
+  //   @include mobile {
+  //     margin: auto;
+  //     padding-right: 10rem;
+  //   }
+  // }
   .heatmap-row {
     @include flex-center;
 
