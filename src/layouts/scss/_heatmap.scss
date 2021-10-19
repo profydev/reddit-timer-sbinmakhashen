@@ -21,7 +21,7 @@
       height: 40px;
     }
     @include mobile {
-      width: auto;
+      width: 100%;
       height: 40px;
       justify-content: left;
     }
@@ -71,7 +71,6 @@
   //     padding-right: 10rem;
   //   }
   // }
-
   .heatmap-row {
     @include flex-center;
 

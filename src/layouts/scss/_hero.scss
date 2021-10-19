@@ -87,6 +87,8 @@
       max-width: 100%;
       @include mobile {
         width: 98%;
+        height: 150px;
+        object-fit: fill;
       }
     }
   }

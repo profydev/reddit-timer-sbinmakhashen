@@ -74,7 +74,6 @@ a {
   }
 }
 
-
 @media screen and (max-width: 320px) {
   .title {
     font-size: 1.1rem !important;
@@ -288,7 +287,6 @@ header .nav-container #nav-bar .nav-links.nav-effect {
     -webkit-transform: translateY(0%);
             transform: translateY(0%);
     opacity: 1;
-
   }
 }
 
@@ -350,7 +348,6 @@ footer #footer {
           align-items: center;
   background: #ffffff;
 }
-
 
 @media (max-width: 480px) {
   footer #footer {
@@ -494,6 +491,9 @@ footer #footer .footer-link {
 @media (max-width: 480px) {
   #hero .hero-img-container .hero-img {
     width: 98%;
+    height: 150px;
+    -o-object-fit: fill;
+       object-fit: fill;
   }
 }
 
@@ -695,7 +695,7 @@ footer #footer .footer-link {
 
 @media (max-width: 480px) {
   #heatmap .heatmap-header-container {
-    width: auto;
+    width: 100%;
     height: 40px;
     -webkit-box-pack: left;
         -ms-flex-pack: left;
@@ -739,25 +739,6 @@ footer #footer .footer-link {
   #heatmap .heatmap-header-container .heatmap-header .hr-of-posts {
     font-size: 0.4rem;
     padding: 0 0.1rem;
-  }
-}
-
-@media (max-width: 1024px) {
-  #heatmap .heatmap-header-container {
-    margin-left: 7.5rem;
-  }
-}
-
-@media (min-width: 481px) and (max-width: 786px) {
-  #heatmap .heatmap-header-container {
-    margin-left: 2rem;
-  }
-}
-
-@media (max-width: 480px) {
-  #heatmap .heatmap-header-container {
-    margin: auto;
-    padding-right: 10rem;
   }
 }
 

@@ -8,14 +8,23 @@ const Header = () => {
   const { subreddit } = useContext(SubContext);
   const labelBurger = useRef(null);
   const { current } = labelBurger;
+  const allLis = document.querySelectorAll('.nav-links li');
 
   function showMobileMenu(e) {
     if (e.target.checked) {
       current.innerHTML = 'X';
+      // closeNavbar(allLis);
     } else {
       current.innerHTML = '&#9776;';
     }
+    allLis.forEach((li) => {
+      li.addEventListener('click', () => {
+        document.getElementById('mobile-nav-check').checked = false;
+        current.innerHTML = '&#9776;';
+      });
+    });
   }
+
   return (
     <>
       <header>
