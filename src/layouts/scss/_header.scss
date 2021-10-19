@@ -10,12 +10,7 @@ header {
     // margin-left: -20px;
     width: 100%;
   }
-  @include mobile {
-    // margin-left: -70px;
-    // margin: auto;
-  }
 
-  // position: relative;
   .nav-container {
     // background: #444;
     @include flex-center;
@@ -42,13 +37,41 @@ header {
         width: 110px;
       }
     }
+
+    // nav
     #nav-bar {
       width: 100%;
       margin-left: 328px;
       @include mobile {
         margin: auto;
-        padding-bottom: 8rem;
       }
+      #mobile-nav-check {
+        display: none;
+
+        @include mobile {
+          &:checked ~ .nav-links {
+            display: block;
+            font-size: 0.8rem;
+            width: 100%;
+            background-color: #cecece;
+            flex-direction: column;
+            align-items: unset;
+            animation: slide 0.8s ease-in-out;
+
+            @keyframes slide {
+              from {
+                transform: translateY(-2rem);
+                opacity: 0.4;
+              }
+              to {
+                transform: translateY(0);
+                opacity: 1;
+              }
+            }
+          }
+        }
+      }
+      // ul
       .nav-links {
         // display: block !important;
         @include flex-center;
@@ -56,23 +79,9 @@ header {
           font-size: 0.8rem;
           margin-left: -15rem;
         }
-        // @include mobile-sm {
-        //   font-size: 0.7rem;
-        //   margin-left: -25rem;
-        // }
-        &.show-mobile-menu {
-          font-size: 0.8rem;
-          width: 100%;
-          background-color: #cecece;
-          flex-direction: column;
-          align-items: unset;
-        }
         @include mobile {
           display: none;
         }
-        // @include mobile-sm {
-        //   display: none;
-        // }
         &.nav-effect {
           animation: slide 1s ease-in-out;
           @keyframes slide {
@@ -104,7 +113,7 @@ header {
   }
 }
 
-.mobile-nav-check {
+.burger {
   border: none;
   font-size: 1rem;
   font-weight: 700;
@@ -114,7 +123,7 @@ header {
   @include mobile {
     display: block;
     position: absolute;
-    top: 34%;
+    top: 35%;
     right: 30px;
   }
 }

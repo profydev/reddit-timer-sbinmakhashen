@@ -185,7 +185,52 @@ header .nav-container #nav-bar {
 @media (max-width: 480px) {
   header .nav-container #nav-bar {
     margin: auto;
-    padding-bottom: 8rem;
+  }
+}
+
+header .nav-container #nav-bar #mobile-nav-check {
+  display: none;
+}
+
+@media (max-width: 480px) {
+  header .nav-container #nav-bar #mobile-nav-check:checked ~ .nav-links {
+    display: block;
+    font-size: 0.8rem;
+    width: 100%;
+    background-color: #cecece;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: unset;
+        -ms-flex-align: unset;
+            align-items: unset;
+    -webkit-animation: slide 0.8s ease-in-out;
+            animation: slide 0.8s ease-in-out;
+  }
+  @-webkit-keyframes slide {
+    from {
+      -webkit-transform: translateY(-2rem);
+              transform: translateY(-2rem);
+      opacity: 0.4;
+    }
+    to {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  @keyframes slide {
+    from {
+      -webkit-transform: translateY(-2rem);
+              transform: translateY(-2rem);
+      opacity: 0.4;
+    }
+    to {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      opacity: 1;
+    }
   }
 }
 
@@ -206,19 +251,6 @@ header .nav-container #nav-bar .nav-links {
     font-size: 0.8rem;
     margin-left: -15rem;
   }
-}
-
-header .nav-container #nav-bar .nav-links.show-mobile-menu {
-  font-size: 0.8rem;
-  width: 100%;
-  background-color: #cecece;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: unset;
-      -ms-flex-align: unset;
-          align-items: unset;
 }
 
 @media (max-width: 480px) {
@@ -277,7 +309,7 @@ header .nav-container #nav-bar .nav-links li {
   }
 }
 
-.mobile-nav-check {
+.burger {
   border: none;
   font-size: 1rem;
   font-weight: 700;
@@ -286,10 +318,10 @@ header .nav-container #nav-bar .nav-links li {
 }
 
 @media (max-width: 480px) {
-  .mobile-nav-check {
+  .burger {
     display: block;
     position: absolute;
-    top: 34%;
+    top: 35%;
     right: 30px;
   }
 }
@@ -388,8 +420,6 @@ footer #footer .footer-link {
 
 @media (min-width: 481px) and (max-width: 786px) {
   #hero {
-    -webkit-transform: translateX(20%);
-            transform: translateX(20%);
     margin: auto;
   }
 }
@@ -576,13 +606,6 @@ footer #footer .footer-link {
 
 .loading {
   text-align: center;
-}
-
-@media (max-width: 480px) {
-  .loading {
-    -webkit-transform: translateX(15%);
-            transform: translateX(15%);
-  }
 }
 
 @media (min-width: 481px) and (max-width: 786px) {
@@ -853,7 +876,7 @@ footer #footer .footer-link {
 
 @media (max-width: 480px) {
   .posts-container {
-    width: 95%;
+    width: 98%;
     height: 100%;
     font-size: 0.52rem;
   }

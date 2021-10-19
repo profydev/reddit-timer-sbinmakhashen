@@ -44,10 +44,6 @@
 
 .loading {
   text-align: center;
-
-  @include mobile {
-    transform: translateX(15%);
-  }
   @include tablet {
     transform: translateX(0);
   }
