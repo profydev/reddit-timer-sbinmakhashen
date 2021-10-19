@@ -21,7 +21,7 @@
       height: 40px;
     }
     @include mobile {
-      width: 100%;
+      width: auto;
       height: 40px;
       justify-content: left;
     }

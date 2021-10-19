@@ -47,7 +47,7 @@ a {
   border-radius: 4px;
 }
 
-@media (max-width: 320px) {
+@media screen and (max-width: 320px) {
   .btn {
     width: 200px;
     height: 30px;
@@ -74,7 +74,7 @@ a {
   }
 }
 
-@media (max-width: 320px) {
+@media screen and (max-width: 320px) {
   .title {
     font-size: 1.1rem !important;
   }
@@ -109,7 +109,7 @@ a {
   }
 }
 
-@media (max-width: 320px) {
+@media screen and (max-width: 320px) {
   .danger {
     font-size: 0.6rem;
   }
@@ -125,14 +125,7 @@ header {
 
 @media (min-width: 481px) and (max-width: 786px) {
   header {
-    margin-left: -70px;
     width: 100%;
-  }
-}
-
-@media (max-width: 480px) {
-  header {
-    margin-left: -70px;
   }
 }
 
@@ -154,6 +147,12 @@ header .nav-container {
   margin: auto;
 }
 
+@media (max-width: 480px) {
+  header .nav-container {
+    display: block;
+  }
+}
+
 header .nav-container .logo {
   margin-left: 80px;
   margin-top: 1.6rem;
@@ -168,10 +167,11 @@ header .nav-container .logo {
 @media (max-width: 480px) {
   header .nav-container .logo {
     width: 129px;
+    margin-left: 1rem;
   }
 }
 
-@media (max-width: 320px) {
+@media screen and (max-width: 320px) {
   header .nav-container .logo {
     width: 110px;
   }
@@ -180,6 +180,13 @@ header .nav-container .logo {
 header .nav-container #nav-bar {
   width: 100%;
   margin-left: 328px;
+}
+
+@media (max-width: 480px) {
+  header .nav-container #nav-bar {
+    margin: auto;
+    padding-bottom: 8rem;
+  }
 }
 
 header .nav-container #nav-bar .nav-links {
@@ -201,17 +208,53 @@ header .nav-container #nav-bar .nav-links {
   }
 }
 
+header .nav-container #nav-bar .nav-links.show-mobile-menu {
+  font-size: 0.8rem;
+  width: 100%;
+  background-color: #cecece;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: unset;
+      -ms-flex-align: unset;
+          align-items: unset;
+}
+
 @media (max-width: 480px) {
   header .nav-container #nav-bar .nav-links {
-    font-size: 0.8rem;
-    margin-left: -15rem;
+    display: none;
   }
 }
 
-@media (max-width: 320px) {
-  header .nav-container #nav-bar .nav-links {
-    font-size: 0.7rem;
-    margin-left: -25rem;
+header .nav-container #nav-bar .nav-links.nav-effect {
+  -webkit-animation: slide 1s ease-in-out;
+          animation: slide 1s ease-in-out;
+}
+
+@-webkit-keyframes slide {
+  from {
+    -webkit-transform: translateY(-10%);
+            transform: translateY(-10%);
+    opacity: 0.5;
+  }
+  to {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes slide {
+  from {
+    -webkit-transform: translateY(-10%);
+            transform: translateY(-10%);
+    opacity: 0.5;
+  }
+  to {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+    opacity: 1;
   }
 }
 
@@ -223,6 +266,31 @@ header .nav-container #nav-bar .nav-links li {
 @media (min-width: 481px) and (max-width: 786px) {
   header .nav-container #nav-bar .nav-links li {
     margin: 0 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  header .nav-container #nav-bar .nav-links li {
+    margin-left: 10px;
+    padding: 0.4rem 0;
+    font-weight: 700;
+  }
+}
+
+.mobile-nav-check {
+  border: none;
+  font-size: 1rem;
+  font-weight: 700;
+  background-color: inherit;
+  display: none;
+}
+
+@media (max-width: 480px) {
+  .mobile-nav-check {
+    display: block;
+    position: absolute;
+    top: 34%;
+    right: 30px;
   }
 }
 
@@ -332,6 +400,7 @@ footer #footer .footer-link {
         -ms-flex-pack: right;
             justify-content: right;
     width: 100%;
+    padding-top: 2.8rem;
   }
 }
 
@@ -462,6 +531,7 @@ footer #footer .footer-link {
 @media (max-width: 480px) {
   #form {
     margin: auto;
+    padding-top: 3.8rem;
   }
 }
 
@@ -599,7 +669,7 @@ footer #footer .footer-link {
 
 @media (max-width: 480px) {
   #heatmap .heatmap-header-container {
-    width: 100%;
+    width: auto;
     height: 40px;
     -webkit-box-pack: left;
         -ms-flex-pack: left;
@@ -778,6 +848,14 @@ footer #footer .footer-link {
 @media (min-width: 481px) and (max-width: 786px) {
   .posts-container {
     width: 686px;
+  }
+}
+
+@media (max-width: 480px) {
+  .posts-container {
+    width: 95%;
+    height: 100%;
+    font-size: 0.52rem;
   }
 }
 
