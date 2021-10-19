@@ -16,7 +16,6 @@ const Header = () => {
       current.innerHTML = '&#9776;';
     }
   }
-
   return (
     <>
       <header>
