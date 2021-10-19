@@ -23,6 +23,7 @@ const Header = () => {
       mobileNav.innerHTML = '&#9776';
     }
   }
+  
   return (
     <>
       <header>
