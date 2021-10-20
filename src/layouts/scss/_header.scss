@@ -1,17 +1,14 @@
 @import 'config';
 header {
   background: color-get(backgroundC);
-  // background: #ffffff;
+  // background: #333;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 7;
   @include tablet {
-    margin-left: -70px;
+    // margin-left: -20px;
     width: 100%;
-  }
-  @include mobile {
-    margin-left: -70px;
   }
 
   .nav-container {
@@ -22,6 +19,10 @@ header {
     height: 80px;
     margin: auto;
 
+    @include mobile {
+      display: block;
+    }
+    
     .logo {
       margin-left: 80px;
       margin-top: 1.6rem;
@@ -30,28 +31,69 @@ header {
       }
       @include mobile {
         width: 129px;
+        margin-left: 1rem;
       }
       @include mobile-sm {
         width: 110px;
       }
     }
 
+    // nav
     #nav-bar {
       width: 100%;
       margin-left: 328px;
+      @include mobile {
+        margin: auto;
+      }
+      #mobile-nav-check {
+        display: none;
+
+        @include mobile {
+          &:checked ~ .nav-links {
+            display: block;
+            font-size: 0.8rem;
+            width: 100%;
+            background-color: #cecece;
+            flex-direction: column;
+            align-items: unset;
+            animation: slide 0.8s ease-in-out;
+
+            @keyframes slide {
+              from {
+                transform: translateY(-2rem);
+                opacity: 0.4;
+              }
+              to {
+                transform: translateY(0);
+                opacity: 1;
+              }
+            }
+          }
+        }
+      }
+      // ul
       .nav-links {
+        // display: block !important;
         @include flex-center;
         @include tablet {
           font-size: 0.8rem;
           margin-left: -15rem;
         }
         @include mobile {
-          font-size: 0.8rem;
-          margin-left: -15rem;
+          display: none;
         }
-        @include mobile-sm {
-          font-size: 0.7rem;
-          margin-left: -25rem;
+        &.nav-effect {
+          animation: slide 1s ease-in-out;
+          @keyframes slide {
+            from {
+              transform: translateY(-10%);
+              opacity: 0.5;
+            }
+            to {
+              transform: translateY(0%);
+              opacity: 1;
+            }
+          }
         }
 
         li {
@@ -60,8 +102,28 @@ header {
           @include tablet {
             margin: 0 0.5rem;
           }
+          @include mobile {
+            margin-left: 10px;
+            padding: 0.4rem 0;
+            font-weight: 700;
+          }
         }
       }
     }
+  }
+}
+
+.burger {
+  border: none;
+  font-size: 1rem;
+  font-weight: 700;
+  background-color: inherit;
+  display: none;
+
+  @include mobile {
+    display: block;
+    position: absolute;
+    top: 35%;
+    right: 30px;
   }
 }

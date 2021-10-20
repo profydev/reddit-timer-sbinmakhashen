@@ -3,7 +3,7 @@
   padding-top: 32px;
   @include mobile {
     margin: auto;
-    transform: translateX(15%);
+    padding-top: 3.8rem;
   }
 
   .title {
@@ -25,9 +25,10 @@
     font-family: 'Montserrat';
     width: 370px;
 
-    @include mobile-sm {
+    @include mobile {
       font-size: 10px;
-      width: 350px;
+      width: 320px;
+      font-size: 1rem;
     }
   }
 
@@ -43,10 +44,6 @@
 
 .loading {
   text-align: center;
-
-  @include mobile {
-    transform: translateX(15%);
-  }
   @include tablet {
     transform: translateX(0);
   }

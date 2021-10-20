@@ -11,6 +11,9 @@ footer {
     width: 100%;
     @include flex-center;
     background: color-get(backgroundC);
+    @include mobile {
+      font-size: 0.8rem;
+    }
 
     a {
       display: inline;
