@@ -104,8 +104,6 @@ a {
 @media (max-width: 480px) {
   .danger {
     font-size: 0.7rem;
-    -webkit-transform: translateX(10%);
-            transform: translateX(10%);
   }
 }
 
