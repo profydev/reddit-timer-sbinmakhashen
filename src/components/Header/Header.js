@@ -8,21 +8,34 @@ const Header = () => {
   const { subreddit } = useContext(SubContext);
   const labelBurger = useRef(null);
   const { current } = labelBurger;
-  const allLis = document.querySelectorAll('.nav-links li');
+  const logo = document.querySelector('.logo');
 
-  function showMobileMenu(e) {
-    if (e.target.checked) {
-      current.innerHTML = 'X';
-      // closeNavbar(allLis);
-    } else {
-      current.innerHTML = '&#9776;';
-    }
-    allLis.forEach((li) => {
+  function closeNavUl(lists, e) {
+    // close when one of the lists clicked
+    lists.forEach((li) => {
       li.addEventListener('click', () => {
-        document.getElementById('mobile-nav-check').checked = false;
+        e.target.checked = false;
         current.innerHTML = '&#9776;';
       });
     });
+
+    // close when the logo clicked
+    logo.addEventListener('click', () => {
+      e.target.checked = false;
+      current.innerHTML = '&#9776;';
+    });
+  }
+
+  // console.log(document.querySelector('.logo'));
+  function showMobileMenu(e) {
+    const allLis = document.querySelectorAll('.nav-links li');
+    if (e.target.checked) {
+      current.innerHTML = 'X';
+    } else {
+      current.innerHTML = '&#9776;';
+    }
+
+    closeNavUl(allLis, e);
   }
 
   return (
